@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PlayerShip.h"
 #include "GameFramework/Character.h"
 #include "AeroHeroPawn.generated.h"
 
@@ -24,19 +25,10 @@ class AAeroHeroPawn : public APawn
 	class USpringArmComponent* CameraBoom;
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game Controller Params")
+	APlayerShip* MyPlayerShip;
+
 	AAeroHeroPawn();
-
-	/** Offset from the ships location to spawn projectiles */
-	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite )
-	FVector GunOffset;
-	
-	/* How fast the weapon will fire */
-	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
-	float FireRate;
-
-	/* The speed our ship moves around the level */
-	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
-	float MoveSpeed;
 
 	/** Sound to play each time we fire */
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
@@ -47,31 +39,12 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End Actor Interface
 
-	/* Fire a shot in the specified direction */
-	void FireShot(FVector FireDirection);
-
-	/* Handler for the fire timer expiry */
-	void ShotTimerExpired();
-
 	// Static names for axis bindings
 	static const FName MoveForwardBinding;
 	static const FName MoveRightBinding;
 	static const FName FireForwardBinding;
-	static const FName FireRightBinding;
-
-private:
-	// Vector Zero.
-	const FVector VectorZero = FVector(0, 0, 0);
-
-	/* Flag to control firing  */
-	uint32 bCanFire : 1;
-
-	/** Handle for efficient management of ShotTimerExpired timer */
-	FTimerHandle TimerHandle_ShotTimerExpired;
 
 public:
-	/** Returns ShipMeshComponent subobject **/
-	FORCEINLINE class UStaticMeshComponent* GetShipMeshComponent() const { return ShipMeshComponent; }
 	/** Returns CameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/

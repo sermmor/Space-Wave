@@ -2,10 +2,13 @@
 
 #include "AeroHeroGameMode.h"
 #include "AeroHeroPawn.h"
+#include "PlayerShip.h"
+#include "PlayerControllerAeroHero.h"
 
 AAeroHeroGameMode::AAeroHeroGameMode()
 {
 	// set default pawn class to our character class
-	DefaultPawnClass = AAeroHeroPawn::StaticClass();
+	DefaultPawnClass = APlayerShip::StaticClass();//AAeroHeroPawn::StaticClass();
+	//PlayerControllerClass = APlayerControllerAeroHero::StaticClass();
 }
 
