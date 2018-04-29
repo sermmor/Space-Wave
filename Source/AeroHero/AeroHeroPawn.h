@@ -60,6 +60,8 @@ public:
 	static const FName FireRightBinding;
 
 private:
+	// Vector Zero.
+	const FVector VectorZero = FVector(0, 0, 0);
 
 	/* Flag to control firing  */
 	uint32 bCanFire : 1;
