@@ -52,7 +52,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void UpdateInputs(float forwardValue, float rightValue, float fireForwardValue);
+	void UpdateInputs(float forwardValue, float rightValue, bool isFirePushed);
 
 private:
 	// Vector Zero.
@@ -66,7 +66,7 @@ private:
 
 	float ForwardValue;
 	float RightValue;
-	float FireForwardValue;
+	bool IsFirePushed;
 
 public:
 	/** Returns ShipMeshComponent subobject **/

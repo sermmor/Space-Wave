@@ -36,6 +36,7 @@ APlayerShip::APlayerShip()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+	IsFirePushed = false;
 }
 
 // Called when the game starts or when spawned
@@ -72,10 +73,14 @@ void APlayerShip::Tick(float DeltaTime)
 	}
 
 	// Create fire direction vector
+	float FireForwardValue = IsFirePushed ? 1 : 0;
 	const FVector FireDirection = FVector(FireForwardValue, 0, 0.f);
 
 	// Try and fire a shot
 	FireShot(FireDirection);
+
+	if (IsFirePushed)
+		IsFirePushed = false;
 }
 
 void APlayerShip::FireShot(FVector FireDirection)
@@ -122,11 +127,13 @@ void APlayerShip::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	check(PlayerInputComponent);
 }
 
-void APlayerShip::UpdateInputs(float forwardValue, float rightValue, float fireForwardValue)
+void APlayerShip::UpdateInputs(float forwardValue, float rightValue, bool isFirePushed)
 {
 	ForwardValue = forwardValue;
 	RightValue = rightValue;
-	FireForwardValue = fireForwardValue;
+	
+	if (!IsFirePushed)
+		IsFirePushed = isFirePushed;
 }
 
 

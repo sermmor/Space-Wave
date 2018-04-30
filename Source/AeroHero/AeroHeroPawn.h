@@ -25,10 +25,16 @@ class AAeroHeroPawn : public APawn
 	class USpringArmComponent* CameraBoom;
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game Controller Params")
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera Game Params")
+	float VelocityCamera;// = 1.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game Pawns")
 	APlayerShip* MyPlayerShip;
 
 	AAeroHeroPawn();
+
+	void OnPushInFire();
 
 	/** Sound to play each time we fire */
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
@@ -42,7 +48,11 @@ public:
 	// Static names for axis bindings
 	static const FName MoveForwardBinding;
 	static const FName MoveRightBinding;
-	static const FName FireForwardBinding;
+	//static const FName FireForwardBinding;
+	static const FName FireNormal;
+
+private:
+	bool IsFirePushed;
 
 public:
 	/** Returns CameraComponent subobject **/

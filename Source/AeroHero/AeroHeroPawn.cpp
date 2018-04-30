@@ -8,7 +8,8 @@
 
 const FName AAeroHeroPawn::MoveForwardBinding("MoveForward");
 const FName AAeroHeroPawn::MoveRightBinding("MoveRight");
-const FName AAeroHeroPawn::FireForwardBinding("FireForward");
+//const FName AAeroHeroPawn::FireForwardBinding("FireForward");
+const FName AAeroHeroPawn::FireNormal("FireNormal");
 
 AAeroHeroPawn::AAeroHeroPawn()
 {	
@@ -24,6 +25,10 @@ AAeroHeroPawn::AAeroHeroPawn()
 	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("TopDownCamera"));
 	CameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	CameraComponent->bUsePawnControlRotation = false;	// Camera does not rotate relative to arm
+
+	UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
+
+	IsFirePushed = false;
 }
 
 void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -33,7 +38,17 @@ void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	// set up gameplay key bindings
 	PlayerInputComponent->BindAxis(MoveForwardBinding);
 	PlayerInputComponent->BindAxis(MoveRightBinding);
-	PlayerInputComponent->BindAxis(FireForwardBinding);
+	//PlayerInputComponent->BindAxis(FireForwardBinding);
+	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFire);
+	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFire);
+	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Repeat, this, &AAeroHeroPawn::OnPushInFire);
+	UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
+}
+
+void AAeroHeroPawn::OnPushInFire()
+{
+	IsFirePushed = true;
+	//UE_LOG(LogTemp, Warning, TEXT("IsFirePushed: %s"), IsFirePushed ? TEXT("True") : TEXT("False"));
 }
 
 void AAeroHeroPawn::Tick(float DeltaSeconds)
@@ -41,12 +56,14 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	// Find movement direction
 	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
 	const float RightValue = GetInputAxisValue(MoveRightBinding);
-	const float FireForwardValue = GetInputAxisValue(FireForwardBinding) > 0 ? 1 : 0;
+	//const float FireForwardValue = GetInputAxisValue(FireForwardBinding) > 0 ? 1 : 0;
 
-	MyPlayerShip->UpdateInputs(ForwardValue, RightValue, FireForwardValue);
+	MyPlayerShip->UpdateInputs(ForwardValue, RightValue, IsFirePushed);
+
+	IsFirePushed = false;
 
 	// Camera forward movement.
-	const FVector MoveDirection = FVector(1, 0, 0.f);
+	FVector MoveDirection = FVector(VelocityCamera, 0, 0);
 	FHitResult Hit(1.f);
 	CameraComponent->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
 }
