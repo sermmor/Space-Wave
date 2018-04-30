@@ -52,7 +52,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void UpdateInputs(float forwardValue, float rightValue, bool isFirePushed);
+	void UpdateInputs(float forwardValue, float rightValue, bool isInvertFire);
 
 private:
 	// Vector Zero.

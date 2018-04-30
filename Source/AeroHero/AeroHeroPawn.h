@@ -55,6 +55,8 @@ private:
 	bool IsFirePushed;
 
 public:
+	float AccelerationCamera;
+
 	/** Returns CameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/

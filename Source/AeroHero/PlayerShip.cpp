@@ -79,8 +79,8 @@ void APlayerShip::Tick(float DeltaTime)
 	// Try and fire a shot
 	FireShot(FireDirection);
 
-	if (IsFirePushed)
-		IsFirePushed = false;
+	/*if (IsFirePushed)
+		IsFirePushed = false;*/
 }
 
 void APlayerShip::FireShot(FVector FireDirection)
@@ -127,13 +127,13 @@ void APlayerShip::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	check(PlayerInputComponent);
 }
 
-void APlayerShip::UpdateInputs(float forwardValue, float rightValue, bool isFirePushed)
+void APlayerShip::UpdateInputs(float forwardValue, float rightValue, bool isInvertFire)
 {
 	ForwardValue = forwardValue;
 	RightValue = rightValue;
 	
-	if (!IsFirePushed)
-		IsFirePushed = isFirePushed;
+	if (isInvertFire)
+		IsFirePushed = !IsFirePushed;
 }
 
 

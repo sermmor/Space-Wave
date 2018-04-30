@@ -29,6 +29,7 @@ AAeroHeroPawn::AAeroHeroPawn()
 	UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
 
 	IsFirePushed = false;
+	AccelerationCamera = 1.0f;
 }
 
 void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -41,7 +42,7 @@ void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	//PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFire);
 	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFire);
-	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Repeat, this, &AAeroHeroPawn::OnPushInFire);
+	//PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Repeat, this, &AAeroHeroPawn::OnPushInFire);
 	UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
 }
 
@@ -63,7 +64,7 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	IsFirePushed = false;
 
 	// Camera forward movement.
-	FVector MoveDirection = FVector(VelocityCamera, 0, 0);
+	FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera, 0, 0);
 	FHitResult Hit(1.f);
 	CameraComponent->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
 }
