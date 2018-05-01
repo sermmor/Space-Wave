@@ -81,7 +81,7 @@ void APlayerShip::Tick(float DeltaTime)
 			Movement = MoveDirection * MoveSpeed * DeltaTime;
 		}
 
-		if (IsShirpInDownLimitCase(ForwardValue)) // Please, note that ForwardValue could be change before.
+		if (IsShirpInDownLimitCase(ForwardValue))
 		{
 			// Invert forward and calculate again MoveDirection and Movement.
 			ForwardValue = (ForwardValue == 0)? 1 : -ForwardValue;
