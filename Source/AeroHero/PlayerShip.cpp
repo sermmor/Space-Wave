@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "PlayerShip.h"
-#include "AeroHeroProjectile.h"
+#include "PlayerProjectile.h"
 #include "TimerManager.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Camera/CameraComponent.h"
@@ -127,7 +127,7 @@ void APlayerShip::FireShot(FVector FireDirection)
 			if (World != NULL)
 			{
 				// spawn the projectile
-				World->SpawnActor<AAeroHeroProjectile>(SpawnLocation, FireRotation);
+				World->SpawnActor<APlayerProjectile>(SpawnLocation, FireRotation);
 			}
 
 			bCanFire = false;
