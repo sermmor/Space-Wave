@@ -63,9 +63,25 @@ void APlayerShip::Tick(float DeltaTime)
 	bool IsInQuietCase = ForwardValue == 0 && IsShirpInDownLimitCase(ForwardValue);
 
 	// If non-zero size and movement is valid, move this actor
-	if (IsShipMovementValid(Movement, RightValue, ForwardValue) || IsInQuietCase)
+	if (Movement.SizeSquared() > 0.0f || IsInQuietCase)
 	{
-		if (IsShirpInDownLimitCase(ForwardValue))
+		if (!IsHorizontalShipMovementValid(RightValue))
+		{
+			// Put RightValue to zero and calculate again MoveDirection and Movement.
+			RightValue = 0;
+			MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+			Movement = MoveDirection * MoveSpeed * DeltaTime;
+		}
+
+		if (!IsVerticalShipMovementValid(ForwardValue))
+		{
+			// Put LeftValue to zero and calculate again MoveDirection and Movement.
+			ForwardValue = 0;
+			MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+			Movement = MoveDirection * MoveSpeed * DeltaTime;
+		}
+
+		if (IsShirpInDownLimitCase(ForwardValue)) // Please, note that ForwardValue could be change before.
 		{
 			// Invert forward and calculate again MoveDirection and Movement.
 			ForwardValue = (ForwardValue == 0)? 1 : -ForwardValue;
@@ -73,6 +89,7 @@ void APlayerShip::Tick(float DeltaTime)
 			Movement = MoveDirection * MoveSpeed * DeltaTime;
 		}
 
+		// Do Movement.
 		const FRotator NewRotation = VectorZero.Rotation();
 		FHitResult Hit(1.f);
 		RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
@@ -182,11 +199,6 @@ bool APlayerShip::IsVerticalShipMovementValid(float Vertical)
 	}
 
 	return true;
-}
-
-bool APlayerShip::IsShipMovementValid(FVector Movement, float Horizontal, float Vertical)
-{
-	return Movement.SizeSquared() > 0.0f && IsVerticalShipMovementValid(Vertical) && IsHorizontalShipMovementValid(Horizontal);
 }
 
 bool APlayerShip::IsShirpInDownLimitCase(float Vertical)

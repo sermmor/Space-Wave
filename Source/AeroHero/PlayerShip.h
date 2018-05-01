@@ -79,7 +79,6 @@ private:
 
 	bool IsHorizontalShipMovementValid(float Horizontal);
 	bool IsVerticalShipMovementValid(float Vertical);
-	bool IsShipMovementValid(FVector Movement, float Horizontal, float Vertical);
 	bool IsShirpInDownLimitCase(float Vertical);
 
 public:
