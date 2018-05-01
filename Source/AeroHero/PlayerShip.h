@@ -6,6 +6,11 @@
 #include "GameFramework/Pawn.h"
 #include "PlayerShip.generated.h"
 
+const float LeftLimit = 1000.f;
+const float RightLimit = -1000.f;
+const float UpLimit = -675.f;
+const float DownLimit = 600.f;
+
 UCLASS()
 class AEROHERO_API APlayerShip : public APawn
 {
@@ -54,6 +59,8 @@ public:
 
 	void UpdateInputs(float forwardValue, float rightValue, bool isInvertFire);
 
+	void UpdateCameraBoomLocation(float x, float y, float z);
+
 private:
 	// Vector Zero.
 	const FVector VectorZero = FVector(0, 0, 0);
@@ -64,9 +71,16 @@ private:
 	/** Handle for efficient management of ShotTimerExpired timer */
 	FTimerHandle TimerHandle_ShotTimerExpired;
 
+	FVector CameraBoomPosition;
+
 	float ForwardValue;
 	float RightValue;
 	bool IsFirePushed;
+
+	bool IsHorizontalShipMovementValid(float Horizontal);
+	bool IsVerticalShipMovementValid(float Vertical);
+	bool IsShipMovementValid(FVector Movement, float Horizontal, float Vertical);
+	bool IsShirpInDownLimitCase(float Vertical);
 
 public:
 	/** Returns ShipMeshComponent subobject **/

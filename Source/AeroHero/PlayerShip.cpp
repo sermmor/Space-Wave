@@ -37,6 +37,8 @@ APlayerShip::APlayerShip()
 	FireRate = 0.1f;
 	bCanFire = true;
 	IsFirePushed = false;
+	// Camera position
+	CameraBoomPosition = FVector(0.f, 0.f, 0.f);
 }
 
 // Called when the game starts or when spawned
@@ -52,15 +54,26 @@ void APlayerShip::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
-	const FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+	FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
 
 	// Calculate  movement
-	const FVector Movement = MoveDirection * MoveSpeed * DeltaTime;
+	FVector Movement = MoveDirection * MoveSpeed * DeltaTime;
 
-	// If non-zero size, move this actor
-	if (Movement.SizeSquared() > 0.0f)
+	// Quiet case.
+	bool IsInQuietCase = ForwardValue == 0 && IsShirpInDownLimitCase(ForwardValue);
+
+	// If non-zero size and movement is valid, move this actor
+	if (IsShipMovementValid(Movement, RightValue, ForwardValue) || IsInQuietCase)
 	{
-		const FRotator NewRotation = VectorZero.Rotation(); //Movement.Rotation();
+		if (IsShirpInDownLimitCase(ForwardValue))
+		{
+			// Invert forward and calculate again MoveDirection and Movement.
+			ForwardValue = (ForwardValue == 0)? 1 : -ForwardValue;
+			MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+			Movement = MoveDirection * MoveSpeed * DeltaTime;
+		}
+
+		const FRotator NewRotation = VectorZero.Rotation();
 		FHitResult Hit(1.f);
 		RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
 
@@ -78,9 +91,7 @@ void APlayerShip::Tick(float DeltaTime)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
-
-	/*if (IsFirePushed)
-		IsFirePushed = false;*/
+	
 }
 
 void APlayerShip::FireShot(FVector FireDirection)
@@ -134,6 +145,56 @@ void APlayerShip::UpdateInputs(float forwardValue, float rightValue, bool isInve
 	
 	if (isInvertFire)
 		IsFirePushed = !IsFirePushed;
+}
+
+void APlayerShip::UpdateCameraBoomLocation(float x, float y, float z)
+{
+	CameraBoomPosition.X = x;
+	CameraBoomPosition.Y = y;
+	CameraBoomPosition.Z = z;
+}
+
+bool APlayerShip::IsHorizontalShipMovementValid(float Horizontal)
+{
+	FVector currentLocation = GetActorLocation();
+	float diff = CameraBoomPosition.Y - currentLocation.Y;
+
+	if (diff > LeftLimit && Horizontal < 0) // Left Limit.
+	{
+		return false;
+	}
+	else if (diff < RightLimit && Horizontal > 0) // Right Limit.
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool APlayerShip::IsVerticalShipMovementValid(float Vertical)
+{
+	FVector currentLocation = GetActorLocation();
+	float diff = CameraBoomPosition.X - currentLocation.X;
+	
+	if (diff < UpLimit && Vertical > 0) // Up Limit.
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool APlayerShip::IsShipMovementValid(FVector Movement, float Horizontal, float Vertical)
+{
+	return Movement.SizeSquared() > 0.0f && IsVerticalShipMovementValid(Vertical) && IsHorizontalShipMovementValid(Horizontal);
+}
+
+bool APlayerShip::IsShirpInDownLimitCase(float Vertical)
+{
+	FVector currentLocation = GetActorLocation();
+	float diff = CameraBoomPosition.X - currentLocation.X;
+
+	return (diff > DownLimit && Vertical <= 0);
 }
 
 

@@ -30,6 +30,7 @@ AAeroHeroPawn::AAeroHeroPawn()
 
 	IsFirePushed = false;
 	AccelerationCamera = 1.0f;
+
 }
 
 void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -66,7 +67,14 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	// Camera forward movement.
 	FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera, 0, 0);
 	FHitResult Hit(1.f);
-	CameraComponent->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
+	CameraBoom->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
+
+	MyPlayerShip->UpdateCameraBoomLocation(CameraBoom->GetComponentLocation().X, 
+		CameraBoom->GetComponentLocation().Y, 
+		CameraBoom->GetComponentLocation().Z);
+
+	//FVector currentLocation = CameraBoom->GetComponentLocation();
+	//UE_LOG(LogTemp, Warning, TEXT("CameraBoom Location: (%f, %f, %f)"), currentLocation.X, currentLocation.Y, currentLocation.Z);
 }
 
 
