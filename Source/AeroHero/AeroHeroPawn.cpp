@@ -18,7 +18,7 @@ AAeroHeroPawn::AAeroHeroPawn()
 	RootComponent = CameraBoom;
 	CameraBoom->bAbsoluteRotation = true; // Don't want arm to rotate when ship does
 	CameraBoom->TargetArmLength = 1200.f;
-	CameraBoom->RelativeRotation = FRotator(-80.f, 0.f, 0.f);
+	CameraBoom->RelativeRotation = FRotator(-80.f, 0.f, 0.f);//FRotator(-30.f, 0.f, 0.f);//-29.999561 °
 	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
 
 	// Create a camera...
