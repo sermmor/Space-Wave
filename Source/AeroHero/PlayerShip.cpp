@@ -125,6 +125,12 @@ void APlayerShip::FireShot(FVector FireDirection)
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
 
 			UWorld* const World = GetWorld();
+
+			// TODO Test vibration
+			//APlayerController * playerCtrl = World->GetFirstPlayerController();
+			//FName tag = "testShake";
+			//playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffect, false, tag);
+
 			if (World != NULL)
 			{
 				// spawn the projectile

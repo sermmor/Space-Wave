@@ -35,6 +35,9 @@ public:
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
 	class USoundBase* FireSound;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vibration")
+	class UForceFeedbackEffect* ForceFeedbackEffect;
+
 	/* Fire a shot in the specified direction */
 	void FireShot(FVector FireDirection);
 
