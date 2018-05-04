@@ -6,11 +6,6 @@
 #include "GameFramework/Pawn.h"
 #include "PlayerShip.generated.h"
 
-const float LeftLimit = 500.f;//1000.f;
-const float RightLimit = -500.f;//-1000.f;
-const float UpLimit = -675.f;
-const float DownLimit = 600.f;
-
 UCLASS()
 class AEROHERO_API APlayerShip : public APawn
 {

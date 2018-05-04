@@ -35,6 +35,7 @@ public:
 	AAeroHeroPawn();
 
 	void OnPushInFire();
+	FVector GetCameraLocation();
 
 	/** Sound to play each time we fire */
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)

@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Enemy.h"
+#include "AeroHeroGameConstants.h"
+#include "AeroHeroPawn.h"
 #include "EnemyProjectile.h"
 #include "TimerManager.h"
 #include "Camera/CameraComponent.h"
@@ -25,22 +27,45 @@ UEnemy::UEnemy()
 	bCanFire = true;
 }
 
-
-
-
 // Called when the game starts
 void UEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 }
 
+bool UEnemy::IsEnemyEnabled()
+{
+	// A enemy is enabled if is inside of the camera up&down area + an offset that depends of the up and down limits.
+	if (CameraPawn == NULL)
+		return false;
+
+	const float UpLimitCameraEnemy = UpLimit * 2 + (UpLimit / 3);
+	const float DownLimitCameraEnemy = DownLimit + (DownLimit / 2);
+
+	AActor * parent = Super::GetOwner();
+	FVector currentLocation = parent->GetActorLocation();
+
+	float cameraBoomPositionX = CameraPawn->GetCameraLocation().X;
+	float diff = cameraBoomPositionX - currentLocation.X;
+
+	if (diff < UpLimitCameraEnemy) // Up Limit. 
+	{
+		return false;
+	}
+	else if (diff > DownLimitCameraEnemy) // Down Limit.
+	{
+		return false;
+	}
+
+	return true;
+}
 
 // Called every frame
 void UEnemy::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	if (CanShoot())
+	if (IsEnemyEnabled() && CanShoot())
 	{
 		// Try and fire a shot
 		const FVector FireDirection = PrepareShootDirection();
@@ -50,7 +75,7 @@ void UEnemy::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 
 bool UEnemy::CanShoot()
 {
-	return true;
+	return IsEnemyEnabled();
 }
 
 FVector UEnemy::PrepareShootDirection()

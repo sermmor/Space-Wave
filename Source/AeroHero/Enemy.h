@@ -28,15 +28,18 @@ public:
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
 	class USoundBase* FireSound;
 
-	/** Put a 1 or -1 in the shoot direction. */
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera Game Params")
-	//FVector ShootDirection;
+	/** AActor with de cameraBoom */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera Game Params")
+	class AAeroHeroPawn* CameraPawn;
 
 	/* Fire a shot in the specified direction */
 	virtual void FireShot(FVector FireDirection);
 
 	/* Handler for the fire timer expiry */
 	void ShotTimerExpired();
+
+	/* If enemy is enable (camera is in ememy) */
+	virtual bool IsEnemyEnabled();
 
 protected:
 	// Called when the game starts

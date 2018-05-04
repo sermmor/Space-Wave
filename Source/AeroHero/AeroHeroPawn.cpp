@@ -44,7 +44,7 @@ void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFire);
 	PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFire);
 	//PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Repeat, this, &AAeroHeroPawn::OnPushInFire);
-	UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
+	//UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
 }
 
 void AAeroHeroPawn::OnPushInFire()
@@ -77,4 +77,10 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	//UE_LOG(LogTemp, Warning, TEXT("CameraBoom Location: (%f, %f, %f)"), currentLocation.X, currentLocation.Y, currentLocation.Z);
 }
 
-
+FVector AAeroHeroPawn::GetCameraLocation()
+{
+	if (CameraBoom != NULL)
+		return CameraBoom->GetComponentLocation();
+	else
+		return FVector(0, 0, 0);
+}

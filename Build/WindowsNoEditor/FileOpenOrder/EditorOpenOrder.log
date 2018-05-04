@@ -1595,9 +1595,9 @@
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/TwinStickProjectile.uasset" 1595
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/OrangeMaterial.uasset" 1596
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/BaseMaterial.uasset" 1597
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/TwinStickUFO.uasset" 1598
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/BlueMaterial.uasset" 1599
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Audio/TwinStickFire.uasset" 1600
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Audio/TwinStickFire.uasset" 1598
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/TwinStickUFO.uasset" 1599
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/BlueMaterial.uasset" 1600
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Intermediate/Config/CoalescedSourceConfigs/SourceControlSettings.ini" 1601
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Intermediate/Config/CoalescedSourceConfigs/Encryption.ini" 1602
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Intermediate/Config/CoalescedSourceConfigs/Crypto.ini" 1603
@@ -1729,30 +1729,30 @@
 "C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/5/4/PHYSX_0A50D9145BC447B69254BED33438406D_PHYSXPC_6B5764544CBF512C67C5CA853D12A8B0__1_0_0_0_2_13315_0.udd" 1729
 "../../../Engine/Content/EditorResources/EmptyActor.uasset" 1730
 "../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 1731
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A466C66941BA06655E9A408A9EA20__A37F5BCAB3F1E303920A79898E888DBD04456F68.udd" 1732
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/3/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A466C66941BA06655E9A408A9EA20__7935B09A8A042A76E7E54D02EA0B7E0EFBED9678.udd" 1733
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A466C66941BA06655E9A408A9EA20__F577D3866A4D1A73B7EED74555F89C0D5440C329.udd" 1734
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A466C66941BA06655E9A408A9EA20__AF65E84ECA949167D1245D66A176102162FF8CAF.udd" 1735
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/9/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_A466C66941BA06655E9A408A9EA20__3B0B708CD453F065BDFF5D5C71665B358CEDAD31.udd" 1736
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/5/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_1748CB544B3DDDFFB82FA8B6B7909__3BB506F540E4CB76F9918B804BA2A3EF0963DCB4.udd" 1737
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/6/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_F37B4E944B579927C0E38BA42014A652__3A01E46DA7400839934409493038D3D595F6C39A.udd" 1738
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/5/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_6FF5BC69493758D97F902281CDD1B18E__A027D0648D3C2E6B49364279716EA5280BCEB570.udd" 1739
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/3/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_A456D1714B323303E017B3B69E55770C_0__BA53FE0DB213517BB181F7B443FD10409BA26CCD.udd" 1740
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/9/6/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_6FF5BC69493758D97F902281CDD1B18E__D42B8E6BFE2BF38F2CE082A6522AA101AD68A7E6.udd" 1741
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_A456D1714B323303E017B3B69E55770C_0__58775FFB826C8BC1B20656DD4F86221877F0D3F1.udd" 1742
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/9/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_6FF5BC69493758D97F902281CDD1B18E__81B2B73C076748994D15BBC9E3CC54DBBFCFD4C5.udd" 1743
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/7/6/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_A456D1714B323303E017B3B69E55770C_0__4AB59DA723EE13EBF5A3D4284A4939A4EBFD48A3.udd" 1744
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_6FF5BC69493758D97F902281CDD1B18E__E28644B6C54C461459FB615A19F43784D7517B87.udd" 1745
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/0/0/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_A456D1714B323303E017B3B69E55770C_0__F960D4BF337C3049B24B98125BC1DB2CEB509105.udd" 1746
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/0/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_6FF5BC69493758D97F902281CDD1B18E__37FA7C3583A6BE7525667D06B518DB0822767A41.udd" 1747
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/9/7/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_A456D1714B323303E017B3B69E55770C_0__63C14FF9604930C2ABD8BD2FB8B9346562B1EC8D.udd" 1748
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/6/6/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_45573D3F4E810326CE526880DF7930C9_0__71E21FC1FDB42346F113081424BA84A09A5D727A.udd" 1749
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E1BB4FDE442A5AB49FD1E5A907A39__D7E4A2224F0BE286FD8884F82678236CD9F664A3.udd" 1750
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/4/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_FC9E2541454D2DAAE50F4681D1F36__3F0875CD878086CB96B6C6DC75455161BD3C15AA.udd" 1751
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E1BB4FDE442A5AB49FD1E5A907A39__FB573304DF31C988819B052BB69D2AA2182216DB.udd" 1752
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/2/2/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E1BB4FDE442A5AB49FD1E5A907A39__02F5BC549D9704C0CA129F64ADA484025FCA6644.udd" 1753
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/3/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E1BB4FDE442A5AB49FD1E5A907A39__5D95614E6894666886AC9968A37A433B3B01ADD5.udd" 1754
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/9/5/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_E1BB4FDE442A5AB49FD1E5A907A39__134823CD728CB1F7D52E7103F98272454E10D00D.udd" 1755
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8D03E6A24BAF0D15B486D58ADCEF5__9965EA6B550B0A6EB881CF9EBD60E3DAFCB2F414.udd" 1732
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8D03E6A24BAF0D15B486D58ADCEF5__FC8E6D3042A2EAC06B859D58535FA0D2CB3F2F55.udd" 1733
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/1/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8D03E6A24BAF0D15B486D58ADCEF5__ED362D793D5EF41AB51B2B07967636E9917E161A.udd" 1734
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/3/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8D03E6A24BAF0D15B486D58ADCEF5__42D86DA6DDBA162BCB185C3F49826F384901AA20.udd" 1735
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/0/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_8D03E6A24BAF0D15B486D58ADCEF5__510820C5814FF57FC47C455AFF1F48D49704966A.udd" 1736
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/3/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_0609005748365DAAEC17A89FAB22D__08DBA072AA49827BB95B989D702970B1B8EFC090.udd" 1737
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/5/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_3C9171C740BF7C4360416DB25A51B112__854D351CB8D7FF48F747EF38124BDF99CDB0DEA6.udd" 1738
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/6/5/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_EA82619141891F3F2B40709F6806DBD9__0AE88731C192E4C1DC1153FF51A29BB541457746.udd" 1739
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/0/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_3C9171C740BF7C4360416DB25A51B112__67C5B0F582E6EF1ED082257AE00B7CB39F5AE646.udd" 1740
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/2/5/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_8A12FBAF4CE64CAACEE1E5B4EECA2CFC_0__6E6935151DB2CFBBBACB7536C445B67524F45305.udd" 1741
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/9/3/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_8A12FBAF4CE64CAACEE1E5B4EECA2CFC_0__41F2DFCFF51378BBDA5F2882D93A5F533AE4686D.udd" 1742
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/6/3/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_3C9171C740BF7C4360416DB25A51B112__307F3960DF6555D4235EDE3B229D92DEEA7BCD94.udd" 1743
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/4/3/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_8A12FBAF4CE64CAACEE1E5B4EECA2CFC_0__FBEC5B462631D9DF69D80733D84A8510192EA820.udd" 1744
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/8/9/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_3C9171C740BF7C4360416DB25A51B112__5CF0D276E820E84A6EA1AFBD8E52C5B845DB80FF.udd" 1745
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/7/3/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_3C9171C740BF7C4360416DB25A51B112__D0CF38E947829ED1DD03423C8B860E5BC47E09CB.udd" 1746
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/6/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_8A12FBAF4CE64CAACEE1E5B4EECA2CFC_0__E6E231C3B5D4C5BAD6C716CDECDF1835E4D8FDD7.udd" 1747
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/8/1/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_A167FF7343FE5EF7B24EFB863054BA78_0__7A5102A58F470EB54CDC8AD8E9DDD23761ACE666.udd" 1748
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/4/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_984958854C75C7CEB7D6008E07F6F__8FB372F4ACEAC074B0A8EB1FE59FCD14440B5EF3.udd" 1749
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/8/4/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_8A12FBAF4CE64CAACEE1E5B4EECA2CFC_0__F39FB38CFD17AC5555150F6187F3A21A938A1522.udd" 1750
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_666052264E09C299A3DFEFB225C0D__DE0BDB8D412F3A2DEFC9063477A0FA023BB71716.udd" 1751
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/7/0/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_984958854C75C7CEB7D6008E07F6F__2F6CF57CAA6F0575CF1907AD208DE65A74B24527.udd" 1752
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/6/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_984958854C75C7CEB7D6008E07F6F__03E53E852044255874DB1399AEBED1CEC715417A.udd" 1753
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/7/8/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_984958854C75C7CEB7D6008E07F6F__CEEBD80FA94E9265714553AAC21E2792DBD9694D.udd" 1754
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/4/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_984958854C75C7CEB7D6008E07F6F__A00F1E7FA1515B34D558FB98C4F7EE5813D83419.udd" 1755
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/StarterMap.umap" 1756
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" 1757
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire01_Cue.uasset" 1758
@@ -1940,19 +1940,19 @@
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Cube.uasset" 1940
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" 1941
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Sphere.uasset" 1942
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Smoke01.uasset" 1943
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire01.uasset" 1944
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/1/STATICMESH_8CAD439CF4B14211ACC831AE9C7C98BC_228332BAE0224DD294E232B87D83948F1$__F4BB78244EB607F9AB1717BD632DC7E13975B93D.udd" 1945
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/5/5/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_063D8385489638148__BF9BF5AB34DFEF5AA99C053B54FEA1D2C9DD8704.udd" 1946
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Music01.uasset" 1947
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind05.uasset" 1948
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Birds01.uasset" 1949
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind06.uasset" 1950
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse01.uasset" 1951
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse02.uasset" 1952
-"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/9/PHYSX_0A50D9145BC447B69254BED33438406D_PHYSXPC_063D838548963814899548BF4C0F4F4__307740162FB22B1D380C5833BDC3E17B5E8BDE8B.udd" 1953
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire_Sparks01.uasset" 1954
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Steam01.uasset" 1955
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/0/1/STATICMESH_8CAD439CF4B14211ACC831AE9C7C98BC_228332BAE0224DD294E232B87D83948F1$__F4BB78244EB607F9AB1717BD632DC7E13975B93D.udd" 1943
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/5/5/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_063D8385489638148__BF9BF5AB34DFEF5AA99C053B54FEA1D2C9DD8704.udd" 1944
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Steam01.uasset" 1945
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire_Sparks01.uasset" 1946
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Smoke01.uasset" 1947
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire01.uasset" 1948
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Music01.uasset" 1949
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind05.uasset" 1950
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Birds01.uasset" 1951
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind06.uasset" 1952
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse01.uasset" 1953
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse02.uasset" 1954
+"C:/Users/sergi/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/4/9/PHYSX_0A50D9145BC447B69254BED33438406D_PHYSXPC_063D838548963814899548BF4C0F4F4__307740162FB22B1D380C5833BDC3E17B5E8BDE8B.udd" 1955
 "../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent_AutoActivate.uasset" 1956
 "../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent.uasset" 1957
 "../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStickCPP/TwinStickOverview.uasset" 1958

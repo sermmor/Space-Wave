@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "PlayerShip.h"
+#include "AeroHeroGameConstants.h"
 #include "PlayerProjectile.h"
 #include "TimerManager.h"
 #include "UObject/ConstructorHelpers.h"

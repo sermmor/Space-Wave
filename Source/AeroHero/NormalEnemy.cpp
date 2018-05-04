@@ -91,14 +91,11 @@ FVector UNormalEnemy::GetMoveDirection()
 
 bool UNormalEnemy::CanMove()
 {
-	// TODO: Only move the ship if it is inside of the camera.
-	return true;
+	return IsEnemyEnabled();
 }
 
 void UNormalEnemy::DoAMove(float DeltaTime)
 {
-	// TODO: Move ship enemy to camera.
-
 	FVector MoveDirection = GetMoveDirection();
 
 	FVector Movement = MoveDirection * MoveSpeed * DeltaTime;
@@ -110,22 +107,4 @@ void UNormalEnemy::DoAMove(float DeltaTime)
 	currentLocation.Z += Movement.Z;
 	parent->SetActorLocation(currentLocation);
 
-	/*
-	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
-	FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
-
-	// Calculate  movement
-	FVector Movement = MoveDirection * MoveSpeed * DeltaTime;
-
-	// Do Movement.
-	const FRotator NewRotation = VectorZero.Rotation();
-	FHitResult Hit(1.f);
-	RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
-
-	if (Hit.IsValidBlockingHit())
-	{
-		const FVector Normal2D = Hit.Normal.GetSafeNormal2D();
-		const FVector Deflection = FVector::VectorPlaneProject(Movement, Normal2D) * (1.f - Hit.Time);
-		RootComponent->MoveComponent(Deflection, NewRotation, true);
-	}*/
 }

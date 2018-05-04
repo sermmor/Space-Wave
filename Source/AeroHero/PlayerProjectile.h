@@ -14,7 +14,8 @@ class AEROHERO_API APlayerProjectile : public AAeroHeroProjectile
 {
 	GENERATED_BODY()
 	
-	
+public:
+	APlayerProjectile();
 	
 	
 };
