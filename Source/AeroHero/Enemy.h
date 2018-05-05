@@ -42,6 +42,13 @@ public:
 	virtual bool IsEnemyEnabled();
 
 protected:
+
+	uint32 Life;
+	uint32 CollideWithPlayerDamage;
+
+	TSubclassOf<AActor> PlayerClass;
+	TSubclassOf<AActor> ProjectileClass;
+
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
@@ -54,6 +61,11 @@ protected:
 	/* Create a Projectile. */
 	virtual void SpawnProjectile(UWorld* World, FVector SpawnLocation, FRotator FireRotation);
 
+	// On hit actor.
+	UFUNCTION()
+	virtual void OnHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit);
+
+	//virtual void OnBeginOverlap();
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

@@ -7,6 +7,5 @@ ANormalEnemyProjectile::ANormalEnemyProjectile()
 {
 	// Die after 0.4 seconds by default
 	InitialLifeSpan = ShootLifeNormalEnemy;
+
 }
-
-

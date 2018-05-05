@@ -31,6 +31,12 @@ APlayerShip::APlayerShip()
 	static ConstructorHelpers::FObjectFinder<USoundBase> FireAudio(TEXT("/Game/TwinStick/Audio/TwinStickFire.TwinStickFire"));
 	FireSound = FireAudio.Object;
 
+	// Classes references for events.
+
+	auto EnemyProjectileLoadClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.EnemyProjectile"));
+	if (EnemyProjectileLoadClass.Succeeded())
+		EnemyProjectileClass = EnemyProjectileLoadClass.Class;
+
 	// Movement
 	MoveSpeed = 1000.0f;
 	// Weapon
@@ -40,19 +46,37 @@ APlayerShip::APlayerShip()
 	IsFirePushed = false;
 	// Camera position
 	CameraBoomPosition = FVector(0.f, 0.f, 0.f);
+
+	// Hurt.
+	bIsInHurtTime = false;
+	HurtTimeDuration = 0.7f;
+
+	// Life
+	Life = 100;
 }
 
 // Called when the game starts or when spawned
 void APlayerShip::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	UWorld* World = GetWorld();
+	playerCtrl = World->GetFirstPlayerController();
+	World = NULL;
 }
 
 // Called every frame
 void APlayerShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (!IsPlayerOne && !IsPlayerTwo) // If is player 3, is mouse, so increase ForwardValue.
+	{
+		if (ForwardValue > 0.1f)
+			ForwardValue *= 3.f;
+		if (RightValue > 0.1f)
+			RightValue *= 10000.f;
+	}
 
 	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
 	FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
@@ -124,21 +148,18 @@ void APlayerShip::FireShot(FVector FireDirection)
 			// Spawn projectile at an offset from this pawn
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
 
-			UWorld* const World = GetWorld();
-
-			// TODO Test vibration
-			//APlayerController * playerCtrl = World->GetFirstPlayerController();
-			//FName tag = "testShake";
-			//playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffect, false, tag);
+			UWorld* World = GetWorld();
 
 			if (World != NULL)
 			{
 				// spawn the projectile
 				World->SpawnActor<APlayerProjectile>(SpawnLocation, FireRotation);
+				World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &APlayerShip::ShotTimerExpired, FireRate);
 			}
 
+			World = NULL;
+
 			bCanFire = false;
-			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &APlayerShip::ShotTimerExpired, FireRate);
 
 			// try and play the sound if specified
 			if (FireSound != nullptr)
@@ -162,13 +183,40 @@ void APlayerShip::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	check(PlayerInputComponent);
 }
 
-void APlayerShip::UpdateInputs(float forwardValue, float rightValue, bool isInvertFire)
+void APlayerShip::UpdateInputsP1(float forwardValue, float rightValue, bool isInvertFire)
 {
-	ForwardValue = forwardValue;
-	RightValue = rightValue;
+	if (IsPlayerOne)
+	{
+		ForwardValue = forwardValue;
+		RightValue = rightValue;
 	
-	if (isInvertFire)
-		IsFirePushed = !IsFirePushed;
+		if (isInvertFire)
+			IsFirePushed = !IsFirePushed;
+	}
+}
+
+void APlayerShip::UpdateInputsP2(float forwardValue, float rightValue, bool isInvertFire)
+{
+	if (!IsPlayerOne && IsPlayerTwo)
+	{
+		ForwardValue = forwardValue;
+		RightValue = rightValue;
+
+		if (isInvertFire)
+			IsFirePushed = !IsFirePushed;
+	}
+}
+
+void APlayerShip::UpdateInputsP3(float forwardValue, float rightValue, bool isInvertFire)
+{
+	if (!IsPlayerOne && !IsPlayerTwo)
+	{
+		ForwardValue = forwardValue;
+		RightValue = rightValue;
+
+		if (isInvertFire)
+			IsFirePushed = !IsFirePushed;
+	}
 }
 
 void APlayerShip::UpdateCameraBoomLocation(float x, float y, float z)
@@ -216,4 +264,44 @@ bool APlayerShip::IsShirpInDownLimitCase(float Vertical)
 	return (diff > DownLimit && Vertical <= 0);
 }
 
+float APlayerShip::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
+{
+	if (bIsInHurtTime)
+	{
+		return 0.f;
+	}
 
+	// Vibration
+	if (IsPlayerOne && playerCtrl != NULL)
+	{
+		if (DamageCauser == NULL || DamageCauser->IsA(EnemyProjectileClass)) // It's a bullet (could be destroyed before).
+		{
+			FName tag = "testShake";
+			playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffectShoot, false, true, tag);
+			UE_LOG(LogTemp, Warning, TEXT("VIBRATION PROJECTILE. Player recieve %f damage."), DamageAmount);
+		}
+		else // Collission with enemy case.
+		{
+			FName tag = "testShake";
+			playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffectCollideWithSomething, false, true, tag);
+			UE_LOG(LogTemp, Warning, TEXT("VIBRATION ENEMY. Player recieve %f damage."), DamageAmount);
+		}
+	}
+
+	// Decrease player life.
+	Life -= DamageAmount;
+	if (Life < 0)
+		Destroy(); // TODO CREATE EXPLOSION PARTICLES.
+
+	// Put in hurt time.
+	bIsInHurtTime = true;
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle_HurtTimerExpired, this, &APlayerShip::HurtTimerExpired, HurtTimeDuration);
+	
+	return 0.f;
+}
+
+void APlayerShip::HurtTimerExpired()
+{
+	UE_LOG(LogTemp, Warning, TEXT("TIMER ENDING."));
+	bIsInHurtTime = false;
+}

@@ -16,6 +16,5 @@ class AEROHERO_API ANormalEnemyProjectile : public AEnemyProjectile
 
 public:
 	ANormalEnemyProjectile();
-	
-	
+
 };

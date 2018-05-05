@@ -108,3 +108,4 @@ void UNormalEnemy::DoAMove(float DeltaTime)
 	parent->SetActorLocation(currentLocation);
 
 }
+

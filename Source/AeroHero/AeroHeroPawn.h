@@ -30,11 +30,13 @@ public:
 	float VelocityCamera;// = 1.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game Pawns")
-	APlayerShip* MyPlayerShip;
+	TArray<APlayerShip*> AllPlayerShips;
 
 	AAeroHeroPawn();
 
-	void OnPushInFire();
+	void OnPushInFireP1();
+	void OnPushInFireP2();
+	void OnPushInFireP3();
 	FVector GetCameraLocation();
 
 	/** Sound to play each time we fire */
@@ -47,13 +49,21 @@ public:
 	// End Actor Interface
 
 	// Static names for axis bindings
-	static const FName MoveForwardBinding;
-	static const FName MoveRightBinding;
+	static const FName MoveForwardBindingP1;
+	static const FName MoveRightBindingP1;
+	static const FName FireNormalP1;
+	static const FName MoveForwardBindingP2;
+	static const FName MoveRightBindingP2;
+	static const FName FireNormalP2;
+	static const FName MoveForwardBindingP3;
+	static const FName MoveRightBindingP3;
+	static const FName FireNormalP3;
 	//static const FName FireForwardBinding;
-	static const FName FireNormal;
 
 private:
-	bool IsFirePushed;
+	bool IsFirePushedP1;
+	bool IsFirePushedP2;
+	bool IsFirePushedP3;
 
 public:
 	float AccelerationCamera;

@@ -15,7 +15,13 @@ class AEROHERO_API AEnemyProjectile : public AAeroHeroProjectile
 	GENERATED_BODY()
 
 public:
-		AEnemyProjectile();
-	
+	AEnemyProjectile();
+
+	uint32 Damage;
+
+protected:
+
+	TSubclassOf<AActor> PlayerClass;
+	virtual void PostHit(AActor* OtherActor) override;
 	
 };

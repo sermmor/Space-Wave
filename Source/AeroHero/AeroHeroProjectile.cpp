@@ -40,6 +40,12 @@ void AAeroHeroProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor
 	{
 		OtherComp->AddImpulseAtLocation(GetVelocity() * 20.0f, GetActorLocation());
 	}
+	PostHit(OtherActor);
 
 	Destroy();
+}
+
+void AAeroHeroProjectile::PostHit(AActor * OtherActor)
+{
+
 }

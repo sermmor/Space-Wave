@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Enemy.h"
+#include "EngineMinimal.h"
 #include "AeroHeroGameConstants.h"
 #include "AeroHeroPawn.h"
 #include "EnemyProjectile.h"
@@ -12,6 +13,7 @@
 #include "Engine/CollisionProfile.h"
 #include "Engine/StaticMesh.h"
 #include "Kismet/GameplayStatics.h"
+#include "PhysicsEngine/PhysicsAsset.h"
 
 
 // Sets default values for this component's properties
@@ -25,12 +27,43 @@ UEnemy::UEnemy()
 	GunOffset = FVector(200.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+
+	auto PlayerProjectileClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.PlayerProjectile"));
+	if (PlayerProjectileClass.Succeeded())
+		ProjectileClass = PlayerProjectileClass.Class;
+
+	auto PlayerLoadClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.PlayerShip"));
+	if (PlayerLoadClass.Succeeded())
+		PlayerClass = PlayerLoadClass.Class;
+
+	Life = 3;
 }
 
 // Called when the game starts
 void UEnemy::BeginPlay()
 {
 	Super::BeginPlay();
+
+	CollideWithPlayerDamage = Life * 2; // Initial value of Life multiply by 3.
+
+	Super::GetOwner()->OnActorHit.AddDynamic(this, &UEnemy::OnHit);
+	
+	// Overlap control
+	/*
+	TArray<UStaticMeshComponent*> Components;
+	Super::GetOwner()->GetComponents<UStaticMeshComponent>(Components);
+	
+	if (Components.Num() > 0)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("MESH OK"));
+		Components[0]->OnComponentBeginOverlap.AddDynamic(this, UEnemy::OnBeginOverlap);
+	}
+	else
+		UE_LOG(LogTemp, Warning, TEXT("DANGER, DANGER, NO MESH!!"));
+	*/
+
+	//Super::GetOwner()->OnActorBeginOverlap.Add(UEnemy::OnBeginOverlap);
+	
 }
 
 bool UEnemy::IsEnemyEnabled()
@@ -129,3 +162,31 @@ void UEnemy::ShotTimerExpired()
 {
 	bCanFire = true;
 }
+
+void UEnemy::OnHit(AActor * SelfActor, AActor * OtherActor, FVector NormalImpulse, const FHitResult & Hit)
+{
+	if (OtherActor)
+	{
+		if (OtherActor->IsA(ProjectileClass))
+		{
+			// Decrease life and check if life < 1 to destroy.
+			Life--;
+			if (Life <= 0)
+				Super::GetOwner()->Destroy(); // TODO CREATE EXPLOSION PARTICLES.
+		}
+		else if (OtherActor->IsA(PlayerClass))
+		{
+			// Notificate damage to player and destroy enemy.
+			UGameplayStatics::ApplyDamage(OtherActor, CollideWithPlayerDamage, NULL, Super::GetOwner(), UDamageType::StaticClass());
+			Super::GetOwner()->Destroy(); // TODO CREATE EXPLOSION PARTICLES.
+		}
+		
+	}
+}
+
+/*
+void UEnemy::OnBeginOverlap()
+{
+	UE_LOG(LogTemp, Warning, TEXT("--------------> ENEMY OVERLAP."));
+}
+*/
