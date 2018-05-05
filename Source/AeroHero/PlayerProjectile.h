@@ -6,6 +6,7 @@
 #include "AeroHeroProjectile.h"
 #include "PlayerProjectile.generated.h"
 
+class APlayerShip;
 /**
  * 
  */
@@ -17,5 +18,16 @@ class AEROHERO_API APlayerProjectile : public AAeroHeroProjectile
 public:
 	APlayerProjectile();
 	
+	void SetPlayerShip(TWeakObjectPtr<APlayerShip> PlayerShip);
+	TWeakObjectPtr<APlayerShip> GetPlayerShip();
+
+	// Executed when component destroyed.
+
+	UFUNCTION()
+	virtual void OnDestroyGameController(AActor* SelfActor);
+
+protected:
+	UPROPERTY()
+	TWeakObjectPtr<APlayerShip> PlayerShip;
 	
 };

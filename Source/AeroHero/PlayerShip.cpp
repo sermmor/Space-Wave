@@ -51,8 +51,9 @@ APlayerShip::APlayerShip()
 	bIsInHurtTime = false;
 	HurtTimeDuration = 0.7f;
 
-	// Life
+	// Life & Score.
 	Life = 100;
+	Score = 0;
 }
 
 // Called when the game starts or when spawned
@@ -153,7 +154,8 @@ void APlayerShip::FireShot(FVector FireDirection)
 			if (World != NULL)
 			{
 				// spawn the projectile
-				World->SpawnActor<APlayerProjectile>(SpawnLocation, FireRotation);
+				APlayerProjectile * playerProjectile = World->SpawnActor<APlayerProjectile>(SpawnLocation, FireRotation);
+				playerProjectile->SetPlayerShip(this);
 				World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &APlayerShip::ShotTimerExpired, FireRate);
 			}
 
@@ -278,13 +280,13 @@ float APlayerShip::TakeDamage(float DamageAmount, FDamageEvent const & DamageEve
 		{
 			FName tag = "testShake";
 			playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffectShoot, false, true, tag);
-			UE_LOG(LogTemp, Warning, TEXT("VIBRATION PROJECTILE. Player recieve %f damage."), DamageAmount);
+			//UE_LOG(LogTemp, Warning, TEXT("VIBRATION PROJECTILE. Player recieve %f damage."), DamageAmount);
 		}
 		else // Collission with enemy case.
 		{
 			FName tag = "testShake";
 			playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffectCollideWithSomething, false, true, tag);
-			UE_LOG(LogTemp, Warning, TEXT("VIBRATION ENEMY. Player recieve %f damage."), DamageAmount);
+			//UE_LOG(LogTemp, Warning, TEXT("VIBRATION ENEMY. Player recieve %f damage."), DamageAmount);
 		}
 	}
 
@@ -300,8 +302,12 @@ float APlayerShip::TakeDamage(float DamageAmount, FDamageEvent const & DamageEve
 	return 0.f;
 }
 
+void APlayerShip::UpdateScore(int PointsToAdd)
+{
+	Score += PointsToAdd;
+}
+
 void APlayerShip::HurtTimerExpired()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TIMER ENDING."));
 	bIsInHurtTime = false;
 }

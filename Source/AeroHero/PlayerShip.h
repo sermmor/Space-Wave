@@ -70,6 +70,8 @@ protected:
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player params")
 	int Life;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player params")
+	int Score;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -84,6 +86,8 @@ public:
 	void UpdateCameraBoomLocation(float x, float y, float z);
 
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser) override;
+
+	void UpdateScore(int PointsToAdd);
 
 private:
 

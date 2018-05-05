@@ -2,6 +2,8 @@
 
 #include "Enemy.h"
 #include "EngineMinimal.h"
+#include "PlayerShip.h"
+#include "PlayerProjectile.h"
 #include "AeroHeroGameConstants.h"
 #include "AeroHeroPawn.h"
 #include "EnemyProjectile.h"
@@ -37,6 +39,7 @@ UEnemy::UEnemy()
 		PlayerClass = PlayerLoadClass.Class;
 
 	Life = 3;
+	ScorePointsToAdd = 5;
 }
 
 // Called when the game starts
@@ -172,11 +175,16 @@ void UEnemy::OnHit(AActor * SelfActor, AActor * OtherActor, FVector NormalImpuls
 			// Decrease life and check if life < 1 to destroy.
 			Life--;
 			if (Life <= 0)
+			{
+				TWeakObjectPtr<APlayerShip> playerShip = ((APlayerProjectile *)OtherActor)->GetPlayerShip();
+				playerShip->UpdateScore(ScorePointsToAdd);
 				Super::GetOwner()->Destroy(); // TODO CREATE EXPLOSION PARTICLES.
+			}
 		}
 		else if (OtherActor->IsA(PlayerClass))
 		{
-			// Notificate damage to player and destroy enemy.
+			// Notificate damage & score to player and destroy enemy.
+			((APlayerShip *)OtherActor)->UpdateScore(ScorePointsToAdd);
 			UGameplayStatics::ApplyDamage(OtherActor, CollideWithPlayerDamage, NULL, Super::GetOwner(), UDamageType::StaticClass());
 			Super::GetOwner()->Destroy(); // TODO CREATE EXPLOSION PARTICLES.
 		}

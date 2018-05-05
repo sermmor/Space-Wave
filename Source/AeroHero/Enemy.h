@@ -45,6 +45,7 @@ protected:
 
 	uint32 Life;
 	uint32 CollideWithPlayerDamage;
+	int ScorePointsToAdd;
 
 	TSubclassOf<AActor> PlayerClass;
 	TSubclassOf<AActor> ProjectileClass;
