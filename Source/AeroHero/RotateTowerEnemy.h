@@ -6,6 +6,8 @@
 #include "TowerEnemy.h"
 #include "RotateTowerEnemy.generated.h"
 
+const float RADIUS = 1000.0f;
+
 /**
  * 
  */
@@ -20,6 +22,9 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Rotate Tower Params")
+	bool IsVerticalRotation;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -27,7 +32,6 @@ protected:
 	virtual FVector PrepareShootDirection() override;
 
 private:
-	const float RADIUS = 1000.0f;
 	float thetaRotation;
 	
 	UPROPERTY()

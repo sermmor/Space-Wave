@@ -33,8 +33,11 @@ void URotateTowerEnemy::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 		thetaRotation = 0.0f;
 
 	// Circle formula (center in (0, 0, 0)).
-	FVector lookAt(RADIUS*FMath::Cos(thetaRotation), RADIUS*FMath::Sin(thetaRotation), 0.0f);
-
+	FVector lookAt;
+	if (IsVerticalRotation)
+		lookAt = FVector(0.f, RADIUS*FMath::Sin(thetaRotation), RADIUS*FMath::Cos(thetaRotation));
+	else
+		lookAt = FVector(RADIUS*FMath::Cos(thetaRotation), RADIUS*FMath::Sin(thetaRotation), 0.f);
 	FRotator EnemyRotation = FRotationMatrix::MakeFromX(lookAt).Rotator();
 	StaticMesh->SetRelativeRotation(EnemyRotation, false, nullptr, ETeleportType::TeleportPhysics);
 	
