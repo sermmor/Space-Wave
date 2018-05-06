@@ -39,6 +39,9 @@ APlayerShip::APlayerShip()
 
 	// Movement
 	MoveSpeed = 1000.0f;
+	JumpRate = 0.3f;
+	JumpState = NO_JUMPING;
+	IsJumpPushed = false;
 	// Weapon
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
@@ -71,6 +74,10 @@ void APlayerShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	// If Jump is pushed, do jump.
+	if (JumpState == NO_JUMPING && IsJumpPushed)
+		JumpState = JUMP_BEGINS;
+
 	if (!IsPlayerOne && !IsPlayerTwo) // If is player 3, is mouse, so increase ForwardValue.
 	{
 		if (ForwardValue > 0.1f)
@@ -79,8 +86,11 @@ void APlayerShip::Tick(float DeltaTime)
 			RightValue *= 10000.f;
 	}
 
+	// Get de current jump movement.
+	float jumpMovement = CheckJumpingMovement();
+
 	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
-	FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+	FVector MoveDirection = FVector(ForwardValue, RightValue, jumpMovement).GetClampedToMaxSize(1.0f);
 
 	// Calculate  movement
 	FVector Movement = MoveDirection * MoveSpeed * DeltaTime;
@@ -95,7 +105,7 @@ void APlayerShip::Tick(float DeltaTime)
 		{
 			// Put RightValue to zero and calculate again MoveDirection and Movement.
 			RightValue = 0;
-			MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+			MoveDirection = FVector(ForwardValue, RightValue, jumpMovement).GetClampedToMaxSize(1.0f);
 			Movement = MoveDirection * MoveSpeed * DeltaTime;
 		}
 
@@ -103,7 +113,7 @@ void APlayerShip::Tick(float DeltaTime)
 		{
 			// Put LeftValue to zero and calculate again MoveDirection and Movement.
 			ForwardValue = 0;
-			MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+			MoveDirection = FVector(ForwardValue, RightValue, jumpMovement).GetClampedToMaxSize(1.0f);
 			Movement = MoveDirection * MoveSpeed * DeltaTime;
 		}
 
@@ -111,7 +121,7 @@ void APlayerShip::Tick(float DeltaTime)
 		{
 			// Invert forward and calculate again MoveDirection and Movement.
 			ForwardValue = (ForwardValue == 0)? 1 : -ForwardValue;
-			MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
+			MoveDirection = FVector(ForwardValue, RightValue, jumpMovement).GetClampedToMaxSize(1.0f);
 			Movement = MoveDirection * MoveSpeed * DeltaTime;
 		}
 
@@ -134,8 +144,45 @@ void APlayerShip::Tick(float DeltaTime)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
-	
 }
+
+float APlayerShip::CheckJumpingMovement()
+{
+	const float jumpImpulse = 0.5f;
+
+	if (JumpState == JUMP_BEGINS)
+	{
+		// Prepare jump.
+		TWeakObjectPtr<UWorld> World = GetWorld();
+		World->GetTimerManager().SetTimer(TimerHandle_JumpTimerExpired, this, &APlayerShip::JumpTimerExpired, JumpRate);
+		JumpState = JUMP_WHILE;
+	}
+	else if (JumpState == JUMP_WHILE)
+	{
+		// Jumping.
+		return jumpImpulse;
+	}
+	else if (JumpState == JUMP_FALLING)
+	{
+		// Falling.
+		return -jumpImpulse;
+	}
+
+	return 0.f;
+}
+
+void APlayerShip::JumpTimerExpired()
+{
+	TWeakObjectPtr<UWorld> World = GetWorld();
+	World->GetTimerManager().SetTimer(TimerHandle_FallTimerExpired, this, &APlayerShip::FallTimerExpired, JumpRate);
+	JumpState = JUMP_FALLING;
+}
+
+void APlayerShip::FallTimerExpired()
+{
+	JumpState = NO_JUMPING;
+}
+
 
 void APlayerShip::FireShot(FVector FireDirection)
 {
@@ -185,36 +232,39 @@ void APlayerShip::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	check(PlayerInputComponent);
 }
 
-void APlayerShip::UpdateInputsP1(float forwardValue, float rightValue, bool isInvertFire)
+void APlayerShip::UpdateInputsP1(float forwardValue, float rightValue, bool isInvertFire, bool isJumpPushed)
 {
 	if (IsPlayerOne)
 	{
 		ForwardValue = forwardValue;
 		RightValue = rightValue;
+		IsJumpPushed = isJumpPushed;
 	
 		if (isInvertFire)
 			IsFirePushed = !IsFirePushed;
 	}
 }
 
-void APlayerShip::UpdateInputsP2(float forwardValue, float rightValue, bool isInvertFire)
+void APlayerShip::UpdateInputsP2(float forwardValue, float rightValue, bool isInvertFire, bool isJumpPushed)
 {
 	if (!IsPlayerOne && IsPlayerTwo)
 	{
 		ForwardValue = forwardValue;
 		RightValue = rightValue;
+		IsJumpPushed = isJumpPushed;
 
 		if (isInvertFire)
 			IsFirePushed = !IsFirePushed;
 	}
 }
 
-void APlayerShip::UpdateInputsP3(float forwardValue, float rightValue, bool isInvertFire)
+void APlayerShip::UpdateInputsP3(float forwardValue, float rightValue, bool isInvertFire, bool isJumpPushed)
 {
 	if (!IsPlayerOne && !IsPlayerTwo)
 	{
 		ForwardValue = forwardValue;
 		RightValue = rightValue;
+		IsJumpPushed = isJumpPushed;
 
 		if (isInvertFire)
 			IsFirePushed = !IsFirePushed;

@@ -19,6 +19,8 @@ public:
 	// Sets default values for this pawn's properties
 	APlayerShip();
 
+	enum JUMP_STATE { NO_JUMPING, JUMP_BEGINS, JUMP_WHILE, JUMP_FALLING };
+
 	/** Offset from the ships location to spawn projectiles */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	FVector GunOffset;
@@ -26,6 +28,10 @@ public:
 	/* How fast the weapon will fire */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	float FireRate;
+
+	/* How fast the ship will jump and fall. */
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
+	float JumpRate;
 
 	/* The speed our ship moves around the level */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
@@ -79,9 +85,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void UpdateInputsP1(float forwardValue, float rightValue, bool isInvertFire);
-	void UpdateInputsP2(float forwardValue, float rightValue, bool isInvertFire);
-	void UpdateInputsP3(float forwardValue, float rightValue, bool isInvertFire);
+	void UpdateInputsP1(float forwardValue, float rightValue, bool isInvertFire, bool isJumpPushed);
+	void UpdateInputsP2(float forwardValue, float rightValue, bool isInvertFire, bool isJumpPushed);
+	void UpdateInputsP3(float forwardValue, float rightValue, bool isInvertFire, bool isJumpPushed);
 
 	void UpdateCameraBoomLocation(float x, float y, float z);
 
@@ -90,6 +96,8 @@ public:
 	void UpdateScore(int PointsToAdd);
 
 private:
+
+	JUMP_STATE JumpState;
 
 	/* Is in a invencible time before receive a damage. */
 	bool bIsInHurtTime;
@@ -113,12 +121,22 @@ private:
 	/** Handle for efficient management of HurtTimerExpired timer */
 	FTimerHandle TimerHandle_HurtTimerExpired;
 
+	/** Handle for efficient management of JumpTimerExpired timer */
+	FTimerHandle TimerHandle_JumpTimerExpired;
+
+	/** Handle for efficient management of FallTimerExpired timer */
+	FTimerHandle TimerHandle_FallTimerExpired;
+
 	FVector CameraBoomPosition;
 
 	float ForwardValue;
 	float RightValue;
 	bool IsFirePushed;
+	bool IsJumpPushed;
 
+	float CheckJumpingMovement();
+	void JumpTimerExpired();
+	void FallTimerExpired();
 	bool IsHorizontalShipMovementValid(float Horizontal);
 	bool IsVerticalShipMovementValid(float Vertical);
 	bool IsShirpInDownLimitCase(float Vertical);

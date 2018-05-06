@@ -33,7 +33,10 @@ public:
 	TArray<APlayerShip*> AllPlayerShips;
 
 	AAeroHeroPawn();
-
+	
+	void OnJumpNormalP1();
+	void OnJumpNormalP2();
+	void OnJumpNormalP3();
 	void OnPushInFireP1();
 	void OnPushInFireP2();
 	void OnPushInFireP3();
@@ -52,18 +55,20 @@ public:
 	static const FName MoveForwardBindingP1;
 	static const FName MoveRightBindingP1;
 	static const FName FireNormalP1;
+	static const FName JumpNormalP1;
 	static const FName MoveForwardBindingP2;
 	static const FName MoveRightBindingP2;
 	static const FName FireNormalP2;
+	static const FName JumpNormalP2;
 	static const FName MoveForwardBindingP3;
 	static const FName MoveRightBindingP3;
 	static const FName FireNormalP3;
+	static const FName JumpNormalP3;
 	//static const FName FireForwardBinding;
 
 private:
-	bool IsFirePushedP1;
-	bool IsFirePushedP2;
-	bool IsFirePushedP3;
+	bool IsPushedJumpP1, IsPushedJumpP2, IsPushedJumpP3;
+	bool IsFirePushedP1, IsFirePushedP2, IsFirePushedP3;
 
 public:
 	float AccelerationCamera;

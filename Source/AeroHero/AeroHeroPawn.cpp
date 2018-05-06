@@ -9,13 +9,17 @@
 const FName AAeroHeroPawn::MoveForwardBindingP1("MoveForward_P1");
 const FName AAeroHeroPawn::MoveRightBindingP1("MoveRight_P1");
 const FName AAeroHeroPawn::FireNormalP1("FireNormal_P1");
+const FName AAeroHeroPawn::JumpNormalP1("JumpNormal_P1");
+
 const FName AAeroHeroPawn::MoveForwardBindingP2("MoveForward_P2");
 const FName AAeroHeroPawn::MoveRightBindingP2("MoveRight_P2");
 const FName AAeroHeroPawn::FireNormalP2("FireNormal_P2");
+const FName AAeroHeroPawn::JumpNormalP2("JumpNormal_P2");
 
 const FName AAeroHeroPawn::MoveForwardBindingP3("MoveForward_P3");
 const FName AAeroHeroPawn::MoveRightBindingP3("MoveRight_P3");
 const FName AAeroHeroPawn::FireNormalP3("FireNormal_P3");
+const FName AAeroHeroPawn::JumpNormalP3("JumpNormal_P3");
 //const FName AAeroHeroPawn::FireForwardBinding("FireForward");
 
 AAeroHeroPawn::AAeroHeroPawn()
@@ -35,9 +39,8 @@ AAeroHeroPawn::AAeroHeroPawn()
 
 	//UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
 
-	IsFirePushedP1 = false;
-	IsFirePushedP2 = false;
-	IsFirePushedP3 = false;
+	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
+	IsPushedJumpP1 = IsPushedJumpP2 = IsPushedJumpP3 = false;
 	AccelerationCamera = 1.0f;
 
 }
@@ -51,22 +54,40 @@ void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	PlayerInputComponent->BindAxis(MoveRightBindingP1);
 	PlayerInputComponent->BindAction(FireNormalP1, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP1);
 	PlayerInputComponent->BindAction(FireNormalP1, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP1);
+	PlayerInputComponent->BindAction(JumpNormalP1, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP1);
 
 	// set up gameplay key bindings Player 2.
 	PlayerInputComponent->BindAxis(MoveForwardBindingP2);
 	PlayerInputComponent->BindAxis(MoveRightBindingP2);
 	PlayerInputComponent->BindAction(FireNormalP2, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP2);
 	PlayerInputComponent->BindAction(FireNormalP2, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP2);
+	PlayerInputComponent->BindAction(JumpNormalP2, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP2);
 
 	// set up gameplay key bindings Player 3.
 	PlayerInputComponent->BindAxis(MoveForwardBindingP3);
 	PlayerInputComponent->BindAxis(MoveRightBindingP3);
 	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP3);
 	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP3);
+	PlayerInputComponent->BindAction(JumpNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP3);
 
 	//PlayerInputComponent->BindAxis(FireForwardBinding);
 	//PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Repeat, this, &AAeroHeroPawn::OnPushInFire);
 	//UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
+}
+
+void AAeroHeroPawn::OnJumpNormalP1()
+{
+	IsPushedJumpP1 = true;
+}
+
+void AAeroHeroPawn::OnJumpNormalP2()
+{
+	IsPushedJumpP2 = true;
+}
+
+void AAeroHeroPawn::OnJumpNormalP3()
+{
+	IsPushedJumpP3 = true;
 }
 
 void AAeroHeroPawn::OnPushInFireP1()
@@ -100,14 +121,13 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 
 	for (APlayerShip* MyPlayerShip : AllPlayerShips)
 	{
-		MyPlayerShip->UpdateInputsP1(ForwardValueP1, RightValueP1, IsFirePushedP1);
-		MyPlayerShip->UpdateInputsP2(ForwardValueP2, RightValueP2, IsFirePushedP2);
-		MyPlayerShip->UpdateInputsP3(ForwardValueP3, RightValueP3, IsFirePushedP3);
+		MyPlayerShip->UpdateInputsP1(ForwardValueP1, RightValueP1, IsFirePushedP1, IsPushedJumpP1);
+		MyPlayerShip->UpdateInputsP2(ForwardValueP2, RightValueP2, IsFirePushedP2, IsPushedJumpP2);
+		MyPlayerShip->UpdateInputsP3(ForwardValueP3, RightValueP3, IsFirePushedP3, IsPushedJumpP3);
 	}
 
-	IsFirePushedP1 = false;
-	IsFirePushedP2 = false;
-	IsFirePushedP3 = false;
+	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
+	IsPushedJumpP1 = IsPushedJumpP2 = IsPushedJumpP3 = false;
 
 	// Camera forward movement.
 	FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera, 0, 0);
