@@ -1,8 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "PlayerShip.h"
+#include "HPItem.h"
 #include "AeroHeroGameConstants.h"
 #include "PlayerProjectile.h"
+#include "PlayerMissileProjectile.h"
+#include "MissileItem.h"
 #include "TimerManager.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Camera/CameraComponent.h"
@@ -32,21 +35,29 @@ APlayerShip::APlayerShip()
 	FireSound = FireAudio.Object;
 
 	// Classes references for events.
-
 	auto EnemyProjectileLoadClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.EnemyProjectile"));
 	if (EnemyProjectileLoadClass.Succeeded())
 		EnemyProjectileClass = EnemyProjectileLoadClass.Class;
+
+	auto HPItemLoadClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.HPItem"));
+	if (HPItemLoadClass.Succeeded())
+		HPItemClass = HPItemLoadClass.Class;
 
 	// Movement
 	MoveSpeed = 1000.0f;
 	JumpRate = 0.3f;
 	JumpState = NO_JUMPING;
 	IsJumpPushed = false;
+
 	// Weapon
 	GunOffset = FVector(90.f, 0.f, 0.f);
+	GunLeftOffset = FVector(90.f, -20.f, 0.f);
+	GunRightOffset = FVector(90.f, 20.f, 0.f);
 	FireRate = 0.1f;
+	TypeFire = FIRE_NORMAL;
 	bCanFire = true;
 	IsFirePushed = false;
+
 	// Camera position
 	CameraBoomPosition = FVector(0.f, 0.f, 0.f);
 
@@ -55,7 +66,7 @@ APlayerShip::APlayerShip()
 	HurtTimeDuration = 0.7f;
 
 	// Life & Score.
-	Life = 100;
+	Life = MaxPlayerLife;
 	Score = 0;
 }
 
@@ -143,7 +154,10 @@ void APlayerShip::Tick(float DeltaTime)
 	const FVector FireDirection = FVector(FireForwardValue, 0, 0.f);
 
 	// Try and fire a shot
-	FireShot(FireDirection);
+	if (TypeFire == FIRE_DOUBLE)
+		bCanFire = FireDoubleShot(FireDirection, bCanFire);
+	else
+		bCanFire = FireShot(FireDirection, bCanFire);
 }
 
 float APlayerShip::CheckJumpingMovement()
@@ -184,10 +198,11 @@ void APlayerShip::FallTimerExpired()
 }
 
 
-void APlayerShip::FireShot(FVector FireDirection)
+bool APlayerShip::FireShot(FVector FireDirection, bool canFire)
 {
+	bool canFireToReturn = canFire;
 	// If it's ok to fire again
-	if (bCanFire == true)
+	if (canFireToReturn == true)
 	{
 		// If we are pressing fire stick in a direction
 		if (FireDirection.SizeSquared() > 0.0f)
@@ -196,19 +211,25 @@ void APlayerShip::FireShot(FVector FireDirection)
 			// Spawn projectile at an offset from this pawn
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
 
-			UWorld* World = GetWorld();
+			TWeakObjectPtr<UWorld> World = GetWorld();
 
 			if (World != NULL)
 			{
 				// spawn the projectile
-				APlayerProjectile * playerProjectile = World->SpawnActor<APlayerProjectile>(SpawnLocation, FireRotation);
-				playerProjectile->SetPlayerShip(this);
+				if (TypeFire == FIRE_MISSILE)
+				{
+					TWeakObjectPtr<APlayerMissileProjectile> playerProjectile = World->SpawnActor<APlayerMissileProjectile>(SpawnLocation, FireRotation);
+					playerProjectile->SetPlayerShip(this);
+				}
+				else
+				{
+					TWeakObjectPtr<APlayerProjectile> playerProjectile = World->SpawnActor<APlayerProjectile>(SpawnLocation, FireRotation);
+					playerProjectile->SetPlayerShip(this);
+				}
 				World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &APlayerShip::ShotTimerExpired, FireRate);
 			}
 
-			World = NULL;
-
-			bCanFire = false;
+			canFireToReturn = false;
 
 			// try and play the sound if specified
 			if (FireSound != nullptr)
@@ -216,9 +237,50 @@ void APlayerShip::FireShot(FVector FireDirection)
 				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 			}
 
-			bCanFire = false;
+			canFireToReturn = false;
 		}
 	}
+	return canFireToReturn;
+}
+
+bool APlayerShip::FireDoubleShot(FVector FireDirection, bool canFire)
+{
+	bool canFireToReturn = canFire;
+	// If it's ok to fire again
+	if (canFireToReturn == true)
+	{
+		// If we are pressing fire stick in a direction
+		if (FireDirection.SizeSquared() > 0.0f)
+		{
+			const FRotator FireRotation = FireDirection.Rotation();
+			// Spawn projectile at an offset from this pawn
+			const FVector SpawnLocationLeft = GetActorLocation() + FireRotation.RotateVector(GunLeftOffset);
+			const FVector SpawnLocationRight = GetActorLocation() + FireRotation.RotateVector(GunRightOffset);
+
+			TWeakObjectPtr<UWorld> World = GetWorld();
+
+			if (World != NULL)
+			{
+				// spawn the projectiles
+				TWeakObjectPtr<APlayerProjectile> playerProjectileLeft = World->SpawnActor<APlayerProjectile>(SpawnLocationLeft, FireRotation);
+				playerProjectileLeft->SetPlayerShip(this);
+				TWeakObjectPtr<APlayerProjectile> playerProjectileRight = World->SpawnActor<APlayerProjectile>(SpawnLocationRight, FireRotation);
+				playerProjectileRight->SetPlayerShip(this);
+				World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &APlayerShip::ShotTimerExpired, FireRate);
+			}
+
+			canFireToReturn = false;
+
+			// try and play the sound if specified
+			if (FireSound != nullptr)
+			{
+				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+			}
+
+			canFireToReturn = false;
+		}
+	}
+	return canFireToReturn;
 }
 
 void APlayerShip::ShotTimerExpired()
@@ -318,6 +380,7 @@ bool APlayerShip::IsShirpInDownLimitCase(float Vertical)
 
 float APlayerShip::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
+
 	if (bIsInHurtTime)
 	{
 		return 0.f;
@@ -360,4 +423,21 @@ void APlayerShip::UpdateScore(int PointsToAdd)
 void APlayerShip::HurtTimerExpired()
 {
 	bIsInHurtTime = false;
+}
+
+void APlayerShip::GetHPItem(int pointsToRecover)
+{
+	Life += pointsToRecover;
+	if (Life > MaxPlayerLife)
+		Life = MaxPlayerLife;
+}
+
+void APlayerShip::SetDoubleShootMode()
+{
+	TypeFire = FIRE_DOUBLE;
+}
+
+void APlayerShip::SetMissileShootMode()
+{
+	TypeFire = FIRE_MISSILE;
 }

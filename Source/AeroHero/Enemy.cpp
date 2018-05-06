@@ -4,6 +4,7 @@
 #include "EngineMinimal.h"
 #include "PlayerShip.h"
 #include "PlayerProjectile.h"
+#include "PlayerMissileProjectile.h"
 #include "AeroHeroGameConstants.h"
 #include "AeroHeroPawn.h"
 #include "EnemyProjectile.h"
@@ -30,14 +31,21 @@ UEnemy::UEnemy()
 	FireRate = 0.1f;
 	bCanFire = true;
 
+	// For collisions
 	auto PlayerProjectileClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.PlayerProjectile"));
 	if (PlayerProjectileClass.Succeeded())
 		ProjectileClass = PlayerProjectileClass.Class;
+
+
+	auto PlayerMissileClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.PlayerMissileProjectile"));//"/Script/AeroHero.PlayerProjectile"));
+	if (PlayerMissileClass.Succeeded())
+		MissileClass = PlayerMissileClass.Class;
 
 	auto PlayerLoadClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.PlayerShip"));
 	if (PlayerLoadClass.Succeeded())
 		PlayerClass = PlayerLoadClass.Class;
 
+	// Life and points.
 	Life = 3;
 	ScorePointsToAdd = 5;
 }
@@ -168,12 +176,24 @@ void UEnemy::ShotTimerExpired()
 
 void UEnemy::OnHit(AActor * SelfActor, AActor * OtherActor, FVector NormalImpulse, const FHitResult & Hit)
 {
+	//UE_LOG(LogTemp, Warning, TEXT("SHOOT PLAYER"));
 	if (OtherActor)
 	{
-		if (OtherActor->IsA(ProjectileClass))
+		if (OtherActor->IsA(MissileClass))
 		{
 			// Decrease life and check if life < 1 to destroy.
-			Life--;
+			Life -= ((APlayerMissileProjectile *)OtherActor)->GetDamage();
+			if (Life <= 0)
+			{
+				TWeakObjectPtr<APlayerShip> playerShip = ((APlayerMissileProjectile *)OtherActor)->GetPlayerShip();
+				playerShip->UpdateScore(ScorePointsToAdd);
+				Super::GetOwner()->Destroy(); // TODO CREATE EXPLOSION PARTICLES.
+			}
+		}
+		else if (OtherActor->IsA(ProjectileClass))
+		{
+			// Decrease life and check if life < 1 to destroy.
+			Life -= ((APlayerProjectile *)OtherActor)->GetDamage();
 			if (Life <= 0)
 			{
 				TWeakObjectPtr<APlayerShip> playerShip = ((APlayerProjectile *)OtherActor)->GetPlayerShip();

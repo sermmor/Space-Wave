@@ -17,6 +17,10 @@ const float ShootLifePlayer = 0.4f;
 const float ShootLifeTowerEnemy = 0.2f;
 #pragma endregion 
 
+const int MaxPlayerLife = 100;
+const int DefaultDamageProjectile = 1;
+const int DefaultDamageMissile = 5;
+
 class AEROHERO_API AeroHeroGameConstants
 {
 public:

@@ -43,13 +43,14 @@ public:
 
 protected:
 
-	uint32 Life;
+	int Life;
 	uint32 CollideWithPlayerDamage;
 	int ScorePointsToAdd;
 
 	TSubclassOf<AActor> PlayerClass;
 	TSubclassOf<AActor> ProjectileClass;
-
+	TSubclassOf<AActor> MissileClass;
+	
 	// Called when the game starts
 	virtual void BeginPlay() override;
 

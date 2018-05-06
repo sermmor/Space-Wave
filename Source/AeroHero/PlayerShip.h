@@ -19,11 +19,18 @@ public:
 	// Sets default values for this pawn's properties
 	APlayerShip();
 
+	enum TYPE_FIRE { FIRE_NORMAL, FIRE_DOUBLE, FIRE_MISSILE};
 	enum JUMP_STATE { NO_JUMPING, JUMP_BEGINS, JUMP_WHILE, JUMP_FALLING };
 
 	/** Offset from the ships location to spawn projectiles */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	FVector GunOffset;
+
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
+	FVector GunLeftOffset;
+	
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
+	FVector GunRightOffset;
 
 	/* How fast the weapon will fire */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
@@ -58,8 +65,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vibration")
 	class UForceFeedbackEffect* ForceFeedbackEffectHighDamage;
 
-	/* Fire a shot in the specified direction */
-	void FireShot(FVector FireDirection);
+	/* Fire a shot in the specified direction (returns if the fire can continue)*/
+	bool FireShot(FVector FireDirection, bool canFire);
+
+	/* Double Fire a shot in the specified direction (returns if the fire can continue)*/
+	bool FireDoubleShot(FVector FireDirection, bool canFire);
 
 	/* Handler for the fire timer expiry */
 	UFUNCTION()
@@ -94,9 +104,12 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const & DamageEvent, class AController * EventInstigator, AActor * DamageCauser) override;
 
 	void UpdateScore(int PointsToAdd);
+	void GetHPItem(int pointsToRecover);
+	void SetDoubleShootMode();
+	void SetMissileShootMode();
 
 private:
-
+	TYPE_FIRE TypeFire;
 	JUMP_STATE JumpState;
 
 	/* Is in a invencible time before receive a damage. */
@@ -105,9 +118,11 @@ private:
 	/* Invencible time before receive a damage. */
 	float HurtTimeDuration;
 
+	UPROPERTY()
 	APlayerController * playerCtrl;
 
 	TSubclassOf<AActor> EnemyProjectileClass;
+	TSubclassOf<AActor> HPItemClass;
 
 	// Vector Zero.
 	const FVector VectorZero = FVector(0, 0, 0);

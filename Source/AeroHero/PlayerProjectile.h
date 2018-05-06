@@ -14,6 +14,15 @@ UCLASS()
 class AEROHERO_API APlayerProjectile : public AAeroHeroProjectile
 {
 	GENERATED_BODY()
+
+protected:
+	/** Sphere collision component */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* ProjectileMesh;
+
+	/** Projectile movement component */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
+	UProjectileMovementComponent* ProjectileMovement;
 	
 public:
 	APlayerProjectile();
@@ -25,6 +34,11 @@ public:
 
 	UFUNCTION()
 	virtual void OnDestroyGameController(AActor* SelfActor);
+
+	/** Returns ProjectileMesh subobject **/
+	FORCEINLINE UStaticMeshComponent* GetProjectileMesh() const { return ProjectileMesh; }
+	/** Returns ProjectileMovement subobject **/
+	FORCEINLINE UProjectileMovementComponent* GetProjectileMovement() const { return ProjectileMovement; }
 
 protected:
 	UPROPERTY()
