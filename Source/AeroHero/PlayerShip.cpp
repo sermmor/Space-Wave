@@ -64,8 +64,10 @@ APlayerShip::APlayerShip()
 	// Hurt.
 	bIsInHurtTime = false;
 	HurtTimeDuration = 0.7f;
+	DieTimeDuration = 0.2f;
 
 	// Life & Score.
+	IsDeath = false;
 	Life = MaxPlayerLife;
 	Score = 0;
 }
@@ -78,12 +80,16 @@ void APlayerShip::BeginPlay()
 	UWorld* World = GetWorld();
 	playerCtrl = World->GetFirstPlayerController();
 	World = NULL;
+	IsDeath = false;
 }
 
 // Called every frame
 void APlayerShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (IsDeath)
+		return;
 
 	// If Jump is pushed, do jump.
 	if (JumpState == NO_JUMPING && IsJumpPushed)
@@ -381,7 +387,7 @@ bool APlayerShip::IsShirpInDownLimitCase(float Vertical)
 float APlayerShip::TakeDamage(float DamageAmount, FDamageEvent const & DamageEvent, AController * EventInstigator, AActor * DamageCauser)
 {
 
-	if (bIsInHurtTime)
+	if (bIsInHurtTime || IsDeath)
 	{
 		return 0.f;
 	}
@@ -406,7 +412,12 @@ float APlayerShip::TakeDamage(float DamageAmount, FDamageEvent const & DamageEve
 	// Decrease player life.
 	Life -= DamageAmount;
 	if (Life < 0)
-		Destroy(); // TODO CREATE EXPLOSION PARTICLES.
+	{
+		// MARK AS DEATH
+		IsDeath = true;
+		GetWorld()->GetTimerManager().SetTimer(TimerHandle_DeathTimerExpired, this, &APlayerShip::DeathTimerExpired, DieTimeDuration);
+		// TODO CREATE EXPLOSION PARTICLES.
+	}
 
 	// Put in hurt time.
 	bIsInHurtTime = true;
@@ -423,6 +434,11 @@ void APlayerShip::UpdateScore(int PointsToAdd)
 void APlayerShip::HurtTimerExpired()
 {
 	bIsInHurtTime = false;
+}
+
+void APlayerShip::DeathTimerExpired()
+{
+	Destroy();
 }
 
 void APlayerShip::GetHPItem(int pointsToRecover)

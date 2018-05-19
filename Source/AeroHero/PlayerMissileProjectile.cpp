@@ -13,7 +13,7 @@
 APlayerMissileProjectile::APlayerMissileProjectile()
 {
 	// Static reference to the mesh to use for the projectile
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ProjectileMeshAsset(TEXT("/Game/AeroHero/Meshes/PlayerMissileProjectile.PlayerMissileProjectile"));//"/Game/AeroHero/Meshes/PlayerMissileProjectile2.PlayerMissileProjectile2"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ProjectileMeshAsset(TEXT("/Game/SpaceWave/Meshes/PlayerMissileProjectile.PlayerMissileProjectile"));//"/Game/AeroHero/Meshes/PlayerMissileProjectile2.PlayerMissileProjectile2"));
 
 	// Create mesh component for the projectile sphere
 	ProjectileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMesh0"));

@@ -69,7 +69,9 @@ public:
 private:
 	bool IsPushedJumpP1, IsPushedJumpP2, IsPushedJumpP3;
 	bool IsFirePushedP1, IsFirePushedP2, IsFirePushedP3;
+	bool IsDeathP1, IsDeathP2, IsDeathP3;
 
+	void CheckPlayersDeaths();
 public:
 	float AccelerationCamera;
 

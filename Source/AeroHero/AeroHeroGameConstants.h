@@ -19,6 +19,7 @@ const float ShootLifeTowerEnemy = 0.2f;
 
 const int MaxPlayerLife = 100;
 const int DefaultDamageProjectile = 1;
+const int DefaultDamageEnemyProjectile = 5;
 const int DefaultDamageMissile = 5;
 
 class AEROHERO_API AeroHeroGameConstants

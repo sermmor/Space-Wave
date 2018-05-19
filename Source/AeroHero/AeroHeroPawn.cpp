@@ -41,6 +41,7 @@ AAeroHeroPawn::AAeroHeroPawn()
 
 	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
 	IsPushedJumpP1 = IsPushedJumpP2 = IsPushedJumpP3 = false;
+	IsDeathP1 = IsDeathP2 = IsDeathP3 = false;
 	AccelerationCamera = 1.0f;
 
 }
@@ -54,21 +55,21 @@ void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	PlayerInputComponent->BindAxis(MoveRightBindingP1);
 	PlayerInputComponent->BindAction(FireNormalP1, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP1);
 	PlayerInputComponent->BindAction(FireNormalP1, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP1);
-	PlayerInputComponent->BindAction(JumpNormalP1, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP1);
+	//PlayerInputComponent->BindAction(JumpNormalP1, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP1);
 
 	// set up gameplay key bindings Player 2.
 	PlayerInputComponent->BindAxis(MoveForwardBindingP2);
 	PlayerInputComponent->BindAxis(MoveRightBindingP2);
 	PlayerInputComponent->BindAction(FireNormalP2, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP2);
 	PlayerInputComponent->BindAction(FireNormalP2, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP2);
-	PlayerInputComponent->BindAction(JumpNormalP2, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP2);
+	//PlayerInputComponent->BindAction(JumpNormalP2, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP2);
 
 	// set up gameplay key bindings Player 3.
 	PlayerInputComponent->BindAxis(MoveForwardBindingP3);
 	PlayerInputComponent->BindAxis(MoveRightBindingP3);
 	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP3);
 	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP3);
-	PlayerInputComponent->BindAction(JumpNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP3);
+	//PlayerInputComponent->BindAction(JumpNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP3);
 
 	//PlayerInputComponent->BindAxis(FireForwardBinding);
 	//PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Repeat, this, &AAeroHeroPawn::OnPushInFire);
@@ -110,6 +111,9 @@ void AAeroHeroPawn::OnPushInFireP3()
 
 void AAeroHeroPawn::Tick(float DeltaSeconds)
 {
+	if (AllPlayerShips.Num() == 0)
+		return;
+
 	// Find movement direction
 	const float ForwardValueP1 = GetInputAxisValue(MoveForwardBindingP1);
 	const float RightValueP1 = GetInputAxisValue(MoveRightBindingP1);
@@ -118,12 +122,19 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	const float ForwardValueP3 = GetInputAxisValue(MoveForwardBindingP3);
 	const float RightValueP3 = GetInputAxisValue(MoveRightBindingP3);
 	//const float FireForwardValue = GetInputAxisValue(FireForwardBinding) > 0 ? 1 : 0;
+	
+	CheckPlayersDeaths();
 
+	int index = 0;
 	for (APlayerShip* MyPlayerShip : AllPlayerShips)
 	{
+		if ((index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
+			continue; // CHECK IF A PLAYER IS DEATH.
+
 		MyPlayerShip->UpdateInputsP1(ForwardValueP1, RightValueP1, IsFirePushedP1, IsPushedJumpP1);
 		MyPlayerShip->UpdateInputsP2(ForwardValueP2, RightValueP2, IsFirePushedP2, IsPushedJumpP2);
 		MyPlayerShip->UpdateInputsP3(ForwardValueP3, RightValueP3, IsFirePushedP3, IsPushedJumpP3);
+		index++;
 	}
 
 	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
@@ -133,14 +144,40 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera, 0, 0);
 	FHitResult Hit(1.f);
 	CameraBoom->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
-
+	
+	index = 0;
 	for (APlayerShip* MyPlayerShip : AllPlayerShips)
+	{
+		if ((index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
+			continue; // CHECK IF A PLAYER IS DEATH.
+
 		MyPlayerShip->UpdateCameraBoomLocation(CameraBoom->GetComponentLocation().X, 
 			CameraBoom->GetComponentLocation().Y, 
 			CameraBoom->GetComponentLocation().Z);
 
+		index++;
+	}
+
 	//FVector currentLocation = CameraBoom->GetComponentLocation();
 	//UE_LOG(LogTemp, Warning, TEXT("CameraBoom Location: (%f, %f, %f)"), currentLocation.X, currentLocation.Y, currentLocation.Z);
+}
+
+void AAeroHeroPawn::CheckPlayersDeaths()
+{
+	if (AllPlayerShips.Num() == 0)
+	{
+		IsDeathP1 = IsDeathP2 = IsDeathP3 = true;
+		return;
+	}
+
+	if (!IsDeathP1 && AllPlayerShips.Num() > 0 && AllPlayerShips[0]->IsDeath)
+		IsDeathP1 = true;
+
+	if (!IsDeathP2 && AllPlayerShips.Num() > 1 && AllPlayerShips[1]->IsDeath)
+		IsDeathP2 = true;
+
+	if (!IsDeathP3 && AllPlayerShips.Num() > 2 && AllPlayerShips[2]->IsDeath)
+		IsDeathP3 = true;
 }
 
 FVector AAeroHeroPawn::GetCameraLocation()

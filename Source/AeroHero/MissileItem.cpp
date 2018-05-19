@@ -9,7 +9,7 @@
 
 AMissileItem::AMissileItem()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ItemMesh(TEXT("/Game/AeroHero/Meshes/MissileItem.MissileItem"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ItemMesh(TEXT("/Game/SpaceWave/Meshes/MissileItem.MissileItem"));
 	// Create the mesh component
 	ItemMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ItemMesh"));
 	RootComponent = ItemMeshComponent;

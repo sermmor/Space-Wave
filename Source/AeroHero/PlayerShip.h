@@ -52,6 +52,10 @@ public:
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	bool IsPlayerTwo;
 
+	/* Check if this player is death. */
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
+	bool IsDeath;
+
 	/** Sound to play each time we fire */
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
 	class USoundBase* FireSound;
@@ -78,6 +82,10 @@ public:
 	/* Handler for the hurt timer expiry */
 	UFUNCTION()
 	void HurtTimerExpired();
+
+	/* Handler for the hurt timer expiry */
+	UFUNCTION()
+	void DeathTimerExpired();
 
 protected:
 	// Called when the game starts or when spawned
@@ -118,6 +126,9 @@ private:
 	/* Invencible time before receive a damage. */
 	float HurtTimeDuration;
 
+	/* Time to wait until destroy this player. */
+	float DieTimeDuration;
+
 	UPROPERTY()
 	APlayerController * playerCtrl;
 
@@ -135,6 +146,9 @@ private:
 
 	/** Handle for efficient management of HurtTimerExpired timer */
 	FTimerHandle TimerHandle_HurtTimerExpired;
+	
+	/** Handle for efficient management of DeathTimerExpired timer */
+	FTimerHandle TimerHandle_DeathTimerExpired;
 
 	/** Handle for efficient management of JumpTimerExpired timer */
 	FTimerHandle TimerHandle_JumpTimerExpired;
