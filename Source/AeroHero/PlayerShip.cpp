@@ -399,13 +399,11 @@ float APlayerShip::TakeDamage(float DamageAmount, FDamageEvent const & DamageEve
 		{
 			FName tag = "testShake";
 			playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffectShoot, false, true, tag);
-			//UE_LOG(LogTemp, Warning, TEXT("VIBRATION PROJECTILE. Player recieve %f damage."), DamageAmount);
 		}
 		else // Collission with enemy case.
 		{
 			FName tag = "testShake";
 			playerCtrl->ClientPlayForceFeedback(ForceFeedbackEffectCollideWithSomething, false, true, tag);
-			//UE_LOG(LogTemp, Warning, TEXT("VIBRATION ENEMY. Player recieve %f damage."), DamageAmount);
 		}
 	}
 

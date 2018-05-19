@@ -27,7 +27,7 @@ class AAeroHeroPawn : public APawn
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera Game Params")
-	float VelocityCamera;// = 1.0f;
+	float VelocityCamera;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game Pawns")
 	TArray<APlayerShip*> AllPlayerShips;
@@ -64,7 +64,6 @@ public:
 	static const FName MoveRightBindingP3;
 	static const FName FireNormalP3;
 	static const FName JumpNormalP3;
-	//static const FName FireForwardBinding;
 
 private:
 	bool IsPushedJumpP1, IsPushedJumpP2, IsPushedJumpP3;

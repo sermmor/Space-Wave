@@ -8,7 +8,7 @@
 AAeroHeroGameMode::AAeroHeroGameMode()
 {
 	// set default pawn class to our character class
-	DefaultPawnClass = AAeroHeroPawn::StaticClass();//APlayerShip::StaticClass();
+	DefaultPawnClass = AAeroHeroPawn::StaticClass();
 	PlayerControllerClass = APlayerControllerAeroHero::StaticClass();
 }
 

@@ -20,7 +20,6 @@ const FName AAeroHeroPawn::MoveForwardBindingP3("MoveForward_P3");
 const FName AAeroHeroPawn::MoveRightBindingP3("MoveRight_P3");
 const FName AAeroHeroPawn::FireNormalP3("FireNormal_P3");
 const FName AAeroHeroPawn::JumpNormalP3("JumpNormal_P3");
-//const FName AAeroHeroPawn::FireForwardBinding("FireForward");
 
 AAeroHeroPawn::AAeroHeroPawn()
 {	
@@ -29,15 +28,13 @@ AAeroHeroPawn::AAeroHeroPawn()
 	RootComponent = CameraBoom;
 	CameraBoom->bAbsoluteRotation = true; // Don't want arm to rotate when ship does
 	CameraBoom->TargetArmLength = 1200.f;
-	CameraBoom->RelativeRotation = FRotator(-80.f, 0.f, 0.f);//FRotator(-30.f, 0.f, 0.f);//-29.999561 °
+	CameraBoom->RelativeRotation = FRotator(-80.f, 0.f, 0.f);
 	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
 
 	// Create a camera...
 	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("TopDownCamera"));
 	CameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	CameraComponent->bUsePawnControlRotation = false;	// Camera does not rotate relative to arm
-
-	//UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
 
 	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
 	IsPushedJumpP1 = IsPushedJumpP2 = IsPushedJumpP3 = false;
@@ -70,10 +67,7 @@ void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInput
 	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP3);
 	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP3);
 	//PlayerInputComponent->BindAction(JumpNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP3);
-
-	//PlayerInputComponent->BindAxis(FireForwardBinding);
-	//PlayerInputComponent->BindAction(FireNormal, EInputEvent::IE_Repeat, this, &AAeroHeroPawn::OnPushInFire);
-	//UE_LOG(LogTemp, Warning, TEXT("VelocityCamera: %f"), VelocityCamera);
+	
 }
 
 void AAeroHeroPawn::OnJumpNormalP1()
@@ -94,25 +88,32 @@ void AAeroHeroPawn::OnJumpNormalP3()
 void AAeroHeroPawn::OnPushInFireP1()
 {
 	IsFirePushedP1 = true;
-	//UE_LOG(LogTemp, Warning, TEXT("IsFirePushed: %s"), IsFirePushed1 ? TEXT("True") : TEXT("False"));
 }
 
 void AAeroHeroPawn::OnPushInFireP2()
 {
 	IsFirePushedP2 = true;
-	//UE_LOG(LogTemp, Warning, TEXT("IsFirePushed: %s"), IsFirePushed2 ? TEXT("True") : TEXT("False"));
 }
 
 void AAeroHeroPawn::OnPushInFireP3()
 {
 	IsFirePushedP3 = true;
-	//UE_LOG(LogTemp, Warning, TEXT("IsFirePushed: %s"), IsFirePushed3 ? TEXT("True") : TEXT("False"));
 }
 
 void AAeroHeroPawn::Tick(float DeltaSeconds)
 {
 	if (AllPlayerShips.Num() == 0)
+	{
+		if (CameraBoom != NULL)
+		{
+			// Camera forward movement.
+			FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera, 0, 0);
+			FHitResult Hit(1.f);
+			CameraBoom->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
+		}
+
 		return;
+	}
 
 	// Find movement direction
 	const float ForwardValueP1 = GetInputAxisValue(MoveForwardBindingP1);
@@ -121,7 +122,6 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	const float RightValueP2 = GetInputAxisValue(MoveRightBindingP2);
 	const float ForwardValueP3 = GetInputAxisValue(MoveForwardBindingP3);
 	const float RightValueP3 = GetInputAxisValue(MoveRightBindingP3);
-	//const float FireForwardValue = GetInputAxisValue(FireForwardBinding) > 0 ? 1 : 0;
 	
 	CheckPlayersDeaths();
 
@@ -157,9 +157,6 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 
 		index++;
 	}
-
-	//FVector currentLocation = CameraBoom->GetComponentLocation();
-	//UE_LOG(LogTemp, Warning, TEXT("CameraBoom Location: (%f, %f, %f)"), currentLocation.X, currentLocation.Y, currentLocation.Z);
 }
 
 void AAeroHeroPawn::CheckPlayersDeaths()

@@ -36,6 +36,5 @@ void AAeroHeroProjectile::PostHit(AActor * OtherActor)
 
 int AAeroHeroProjectile::GetDamage()
 {
-	//UE_LOG(LogTemp, Warning, TEXT("(damage value = %d"), Damage);
 	return Damage;
 }

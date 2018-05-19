@@ -37,7 +37,7 @@ void AItem::Tick(float DeltaTime)
 
 void AItem::PlayerHasGottenItem(TWeakObjectPtr<APlayerShip> OtherActor)
 {
-	//UE_LOG(LogTemp, Warning, TEXT("PlayerHasGottenItem"));
+	
 }
 
 void AItem::OnHit(AActor * SelfActor, AActor * OtherActor, FVector NormalImpulse, const FHitResult & Hit)

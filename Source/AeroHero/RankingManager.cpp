@@ -72,14 +72,6 @@ TArray<FString> ARankingManager::GetNames() const
 void ARankingManager::SaveNewRecord(FString name, int score)
 {
 	InsertNewRecordInOrder(name, score);
-	/*
-	for(int i = 0; i < NamePlayers.Num(); i++)
-	{
-	UE_LOG(LogTemp, Warning, TEXT("Ranking: %d - %s - %d"), i, TCHAR_TO_UTF8(*NamePlayers[i]), ScorePlayers[i]);
-	}
-
-	UE_LOG(LogTemp, Warning, TEXT("Your save: name (%s) with score (%d) [Total saved = %d]"), TCHAR_TO_UTF8(*name), score, NamePlayers.Num());
-	*/
 	SaveCurrentRanking();
 }
 
@@ -108,8 +100,6 @@ void ARankingManager::InsertNewRecordInOrder(FString name, int score)
 void ARankingManager::ReverseScorePlayers()
 {
 	TArray<int> NewScorePlayers;
-
-	//UE_LOG(LogTemp, Warning, TEXT("end = %d - lastIndex = %s %d"), i, TCHAR_TO_UTF8(*NamePlayers[i]), ScorePlayers[i]);
 
 	int init = (ScorePlayers.Num() - 1) > 9 ? 9 : (ScorePlayers.Num() - 1);
 

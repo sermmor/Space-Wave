@@ -37,7 +37,7 @@ UEnemy::UEnemy()
 		ProjectileClass = PlayerProjectileClass.Class;
 
 
-	auto PlayerMissileClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.PlayerMissileProjectile"));//"/Script/AeroHero.PlayerProjectile"));
+	auto PlayerMissileClass = ConstructorHelpers::FClassFinder<AActor>(TEXT("/Script/AeroHero.PlayerMissileProjectile"));
 	if (PlayerMissileClass.Succeeded())
 		MissileClass = PlayerMissileClass.Class;
 
@@ -58,23 +58,6 @@ void UEnemy::BeginPlay()
 	CollideWithPlayerDamage = Life * 2; // Initial value of Life multiply by 3.
 
 	Super::GetOwner()->OnActorHit.AddDynamic(this, &UEnemy::OnHit);
-	
-	// Overlap control
-	/*
-	TArray<UStaticMeshComponent*> Components;
-	Super::GetOwner()->GetComponents<UStaticMeshComponent>(Components);
-	
-	if (Components.Num() > 0)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("MESH OK"));
-		Components[0]->OnComponentBeginOverlap.AddDynamic(this, UEnemy::OnBeginOverlap);
-	}
-	else
-		UE_LOG(LogTemp, Warning, TEXT("DANGER, DANGER, NO MESH!!"));
-	*/
-
-	//Super::GetOwner()->OnActorBeginOverlap.Add(UEnemy::OnBeginOverlap);
-	
 }
 
 bool UEnemy::IsEnemyEnabled()
@@ -176,7 +159,6 @@ void UEnemy::ShotTimerExpired()
 
 void UEnemy::OnHit(AActor * SelfActor, AActor * OtherActor, FVector NormalImpulse, const FHitResult & Hit)
 {
-	//UE_LOG(LogTemp, Warning, TEXT("SHOOT PLAYER"));
 	if (OtherActor)
 	{
 		if (OtherActor->IsA(MissileClass))
@@ -212,9 +194,3 @@ void UEnemy::OnHit(AActor * SelfActor, AActor * OtherActor, FVector NormalImpuls
 	}
 }
 
-/*
-void UEnemy::OnBeginOverlap()
-{
-	UE_LOG(LogTemp, Warning, TEXT("--------------> ENEMY OVERLAP."));
-}
-*/

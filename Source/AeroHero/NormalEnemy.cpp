@@ -23,7 +23,7 @@ UNormalEnemy::UNormalEnemy()
 	IsFirstShoot = true;
 
 	// Movement
-	MoveSpeed = 500.0f;//1000.0f;
+	MoveSpeed = 500.0f;
 }
 
 FVector UNormalEnemy::PrepareShootDirection()

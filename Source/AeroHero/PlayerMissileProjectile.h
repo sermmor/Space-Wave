@@ -14,17 +14,6 @@ class AEROHERO_API APlayerMissileProjectile : public APlayerProjectile
 {
 	GENERATED_BODY()
 	
-	/*
-	/** Sphere collision component * /
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* MissileMesh;
-
-	/** Projectile movement component * /
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
-	UProjectileMovementComponent* MissileMovement;
-	*/
-
-	
 public:
 	APlayerMissileProjectile();
 	
