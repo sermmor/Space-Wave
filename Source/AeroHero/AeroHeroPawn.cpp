@@ -128,7 +128,7 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	int index = 0;
 	for (APlayerShip* MyPlayerShip : AllPlayerShips)
 	{
-		if ((index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
+		if (MyPlayerShip == NULL || (index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
 			continue; // CHECK IF A PLAYER IS DEATH.
 
 		MyPlayerShip->UpdateInputsP1(ForwardValueP1, RightValueP1, IsFirePushedP1, IsPushedJumpP1);
@@ -148,7 +148,7 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 	index = 0;
 	for (APlayerShip* MyPlayerShip : AllPlayerShips)
 	{
-		if ((index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
+		if (MyPlayerShip == NULL || (index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
 			continue; // CHECK IF A PLAYER IS DEATH.
 
 		MyPlayerShip->UpdateCameraBoomLocation(CameraBoom->GetComponentLocation().X, 

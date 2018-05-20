@@ -1,605 +1,623 @@
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.uasset" 0
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/HUD/IngameOutlineFontMaterial.uasset" 1
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_PauseHUD.uasset" 2
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_LaunchPause.uasset" 3
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset" 4
-"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset" 5
-"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset" 6
-"../../../Engine/Content/EngineMaterials/DefaultMaterial.uasset" 7
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Geometry/Cone.uasset" 8
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Black1.uasset" 9
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/BlackWithLights.uasset" 10
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/BaseMaterial.uasset" 11
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/OrangeMaterial.uasset" 12
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/enemies/OLDTowerMaterial.uasset" 13
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/HUD/IngameFontMaterial.uasset" 14
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Items/HPBlueMaterial.uasset" 15
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Items/RedMaterial.uasset" 16
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Meshes/EnemyProjectile.uasset" 17
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/YellowMaterial.uasset" 18
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Meshes/MissileItem.uasset" 19
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Meshes/PlayerMissileProjectile.uasset" 20
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Meshes/PlayerMissileProjectile2.uasset" 21
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Items/GreenMaterial.uasset" 22
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Meshes/PlayerProjectile.uasset" 23
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/mask00.uasset" 24
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/mask00Inv.uasset" 25
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/mask01.uasset" 26
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/mask01Invert.uasset" 27
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/mask02.uasset" 28
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Items/BlackBlueMaterial.uasset" 29
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/DoubleShootItem.uasset" 30
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/ship/BlueShipMaterial.uasset" 31
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/HPItem.uasset" 32
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/MissileShootItem.uasset" 33
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/CubeMaterial.uasset" 34
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/TemplateFloor.uasset" 35
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Basic_Wall.uasset" 36
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Pillar_50x500.uasset" 37
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_400x300.uasset" 38
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_400x400.uasset" 39
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_500x500.uasset" 40
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" 41
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" 42
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse01.uasset" 43
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse02.uasset" 44
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Explosion01.uasset" 45
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Explosion02.uasset" 46
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire01.uasset" 47
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire_Sparks01.uasset" 48
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light01.uasset" 49
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light01_Cue.uasset" 50
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light02.uasset" 51
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light02_Cue.uasset" 52
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Smoke01.uasset" 53
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Birds01.uasset" 54
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Music01.uasset" 55
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind05.uasset" 56
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind06.uasset" 57
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Steam01.uasset" 58
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Explosion_Cue.uasset" 59
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Burst_M.uasset" 60
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Burst.uasset" 61
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" 62
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" 63
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/m_flare_01.uasset" 64
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradient.uasset" 65
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" 66
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" 67
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" 68
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" 69
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Explosion.uasset" 70
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" 71
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/T_ColorGrid.uasset" 72
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" 73
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Bush_D.uasset" 74
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Bush_N.uasset" 75
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Bush.uasset" 76
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Bush.uasset" 77
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Chair_M.uasset" 78
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Chair_N.uasset" 79
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Chair.uasset" 80
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Couch.uasset" 81
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Glass.uasset" 82
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Door_M.uasset" 83
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Door_N.uasset" 84
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Door.uasset" 85
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Door.uasset" 86
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset" 87
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset" 88
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset" 89
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.uasset" 90
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" 91
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" 92
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_RockMesh_M.uasset" 93
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_RockMesh_N.uasset" 94
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Rock.uasset" 95
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Rock.uasset" 96
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Shelf_M.uasset" 97
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Shelf_N.uasset" 98
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Shelf.uasset" 99
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Shelf.uasset" 100
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Basic_Floor.uasset" 101
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Stairs.uasset" 102
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Cone.uasset" 103
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Cylinder.uasset" 104
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" 105
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Pipe.uasset" 106
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" 107
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" 108
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Plane.uasset" 109
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Torus.uasset" 110
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Trim.uasset" 111
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" 112
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" 113
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" 114
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Tube.uasset" 115
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" 116
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" 117
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" 118
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Audio/TwinStickFire.uasset" 119
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/TwinStickProjectile.uasset" 120
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/TwinStickUFO.uasset" 121
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStickCPP/Maps/TwinStickExampleMap_BuiltData_2.uasset" 122
-"../../../Engine/Content/EngineMaterials/WorldGridMaterial.uasset" 123
-"../../../Engine/Content/BasicShapes/Cube.uasset" 124
-"../../../Engine/Content/BasicShapes/Cylinder.uasset" 125
-"../../../Engine/Content/BasicShapes/Sphere.uasset" 126
-"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 127
-"../../../Engine/Content/EditorMaterials/GizmoMaterial.uasset" 128
-"../../../Engine/Content/EditorMaterials/MAT_Groups_Toggle.uasset" 129
-"../../../Engine/Content/EditorMaterials/MAT_Groups_Visibility.uasset" 130
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 131
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 132
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_ColorTrack.uasset" 133
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Anim.uasset" 134
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_AudioMaster.uasset" 135
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Director.uasset" 136
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Event.uasset" 137
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Fade.uasset" 138
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Float.uasset" 139
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Move.uasset" 140
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Slomo.uasset" 141
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Sound.uasset" 142
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Vector.uasset" 143
-"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 144
-"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 145
-"../../../Engine/Content/EditorMaterials/Camera/CineMat.uasset" 146
-"../../../Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.uasset" 147
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Arm.uasset" 148
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Base.uasset" 149
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Body.uasset" 150
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Mount.uasset" 151
-"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Mount.uasset" 152
-"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.uasset" 153
-"../../../Engine/Content/EditorResources/BSPVertex.uasset" 154
-"../../../Engine/Content/EditorResources/EmptyActor.uasset" 155
-"../../../Engine/Content/EditorResources/S_Actor.uasset" 156
-"../../../Engine/Content/EditorResources/S_Trigger.uasset" 157
-"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent.uasset" 158
-"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent_AutoActivate.uasset" 159
-"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 160
-"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 161
-"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 162
-"../../../Engine/Content/EditorSounds/Notifications/CompileFailed.uasset" 163
-"../../../Engine/Content/EditorSounds/Notifications/CompileFailed_Cue.uasset" 164
-"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess.uasset" 165
-"../../../Engine/Content/EditorSounds/Notifications/CompileStart_Cue.uasset" 166
-"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess_Cue.uasset" 167
-"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 168
-"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 169
-"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 170
-"../../../Engine/Content/EngineDebugMaterials/ClothMaterial.uasset" 171
-"../../../Engine/Content/EngineDebugMaterials/ClothMaterial_WF.uasset" 172
-"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 173
-"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 174
-"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 175
-"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 176
-"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 177
-"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 178
-"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 179
-"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 180
-"../../../Engine/Content/EngineFonts/Roboto.uasset" 181
-"../../../Engine/Content/EngineFonts/Faces/RobotoTiny.uasset" 182
-"../../../Engine/Content/EngineFonts/RobotoTiny.uasset" 183
-"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 184
-"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 185
-"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 186
-"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 187
-"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 188
-"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 189
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 190
-"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 191
-"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 192
-"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 193
-"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 194
-"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 195
-"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 196
-"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 197
-"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 198
-"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 199
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset" 200
-"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 201
-"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 202
-"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 203
-"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 204
-"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 205
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 206
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 207
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 208
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 209
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 210
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 211
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 212
-"../../../Engine/Content/EngineMeshes/Cube.uasset" 213
-"../../../Engine/Content/EngineMeshes/Cylinder.uasset" 214
-"../../../Engine/Content/EngineMeshes/Sphere.uasset" 215
-"../../../Engine/Content/EngineResources/Black.uasset" 216
-"../../../Engine/Content/EngineResources/DefaultTexture.uasset" 217
-"../../../Engine/Content/EngineResources/DefaultTextureCube.uasset" 218
-"../../../Engine/Content/EngineResources/GradientTexture0.uasset" 219
-"../../../Engine/Content/EngineSounds/Master.uasset" 220
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 221
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 222
-"../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 223
-"../../../Engine/Content/Maps/Templates/Thumbnails/VR-Basic.uasset" 224
-"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 225
-"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 226
-"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 227
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 228
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 229
-"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 230
-"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 231
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 232
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 233
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 234
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 235
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 236
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 237
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 238
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 239
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 240
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 241
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 242
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 243
-"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 244
-"../../../Engine/Content/Tutorial/Basics/TutorialAssets/icon_tab_Levels_40x.uasset" 245
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintInterface_64x.uasset" 246
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintMacroLibrary_64x.uasset" 247
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Blueprint_64x.uasset" 248
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 249
-"../../../Engine/Content/Tutorial/Foliage/TutorialAssets/Foliage.uasset" 250
-"../../../Engine/Content/Tutorial/Landscape/TutorialAssets/Landscape.uasset" 251
-"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DFlipbook_TutorialIcon.uasset" 252
-"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DSprite_TutorialIcon.uasset" 253
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_Editor_Preferences_General_40x.uasset" 254
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_ShowSkeletalMeshes_40x.uasset" 255
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 256
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 257
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 258
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 259
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 260
-"../../../Engine/Content/VREditor/Devices/Generic/GenericHMDMaterial.uasset" 261
-"../../../Engine/Content/VREditor/Devices/Generic/GenericHMD.uasset" 262
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uasset" 263
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksB.uasset" 264
-"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial.uasset" 265
-"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial_Inst.uasset" 266
-"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMesh.uasset" 267
-"../../../Engine/Content/VREditor/Devices/Vive/T_VivePreController_EM.uasset" 268
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksA.uasset" 269
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerDiffuse.uasset" 270
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerSpec.uasset" 271
-"../../../Engine/Content/VREditor/LaserPointer/VR_LaserPower_01.uasset" 272
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial.uasset" 273
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial_Inst.uasset" 274
-"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMesh.uasset" 275
-"../../../Engine/Content/VREditor/FloatingText/LineMaterial.uasset" 276
-"../../../Engine/Content/VREditor/FloatingText/JointSphere.uasset" 277
-"../../../Engine/Content/VREditor/FloatingText/LineSegmentCylinder.uasset" 278
-"../../../Engine/Content/VREditor/Fonts/VRText_RobotoLarge.uasset" 279
-"../../../Engine/Content/VREditor/Fonts/VRTextMaterial.uasset" 280
-"../../../Engine/Content/VREditor/Fonts/TranslucentVRTextMaterial.uasset" 281
-"../../../Engine/Content/VREditor/LaserPointer/CursorPointer.uasset" 282
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.uasset" 283
-"../../../Engine/Content/VREditor/LaserPointer/HoverMaterial.uasset" 284
-"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.uasset" 285
-"../../../Engine/Content/VREditor/LaserPointer/TranslucentHoverMaterial.uasset" 286
-"../../../Engine/Content/VREditor/LaserPointer/HoverMesh.uasset" 287
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterial.uasset" 288
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterialInst.uasset" 289
-"../../../Engine/Content/VREditor/LaserPointer/TranslucentLaserPointerMaterialInst.uasset" 290
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh.uasset" 291
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_End.uasset" 292
-"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_Start.uasset" 293
-"../../../Engine/Content/VREditor/Sounds/VR_teleport.uasset" 294
-"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button.uasset" 295
-"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button_Cue.uasset" 296
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Close.uasset" 297
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Drop.uasset" 298
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Open.uasset" 299
-"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Pick_Up.uasset" 300
-"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uasset" 301
-"../../../Engine/Content/VREditor/Sounds/UI/Floating_UI_Open-001.uasset" 302
-"../../../Engine/Content/VREditor/Sounds/UI/Radial_Menu_FadeOut.uasset" 303
-"../../../Engine/Content/VREditor/Sounds/UI/Teleport_Mode_Entered.uasset" 304
-"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial.uasset" 305
-"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial_Inst.uasset" 306
-"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMesh.uasset" 307
-"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset" 308
-"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset" 309
-"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 310
-"../../../Engine/Content/VREditor/TransformGizmo/Main.uasset" 311
-"../../../Engine/Content/VREditor/TransformGizmo/Xray.uasset" 312
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Close.uasset" 313
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Move.uasset" 314
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.uasset" 315
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Node.uasset" 316
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uasset" 317
-"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uasset" 318
-"../../../Engine/Content/VREditor/Devices/Vive/UE4_Logo.uasset" 319
-"../../../Engine/Content/VREditor/UI/M_ContentWindow.uasset" 320
-"../../../Engine/Content/VREditor/UI/SM_ContentWindow_01.uasset" 321
-"../../../Engine/Content/VREditor/UI/KeyDiskMaterial.uasset" 322
-"../../../Engine/Content/VREditor/UI/DiscMaterial.uasset" 323
-"../../../Engine/Content/VREditor/UI/SM_Radial_Disk.uasset" 324
-"../../../Engine/Content/VREditor/UI/ArrowMaterial.uasset" 325
-"../../../Engine/Content/VREditor/UI/SM_Radial_Pointer.uasset" 326
-"../../../Engine/Content/VREditor/WorldMovementGrid/SimpleGrid.uasset" 327
-"../../../Engine/Content/VREditor/WorldMovementGrid/GridMaterial.uasset" 328
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.uasset" 329
-"../../../Engine/Content/VREditor/WorldMovementGrid/GridPostProcess.uasset" 330
-"../../../Engine/Content/EditorLandscapeResources/FlattenHeightMat.uasset" 331
-"../../../Engine/Content/VREditor/WorldMovementGrid/PlaneMesh.uasset" 332
-"../../Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 333
-"../../Plugins/2D/Paper2D/Content/DummySprite.uasset" 334
-"../../Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 335
-"../../Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 336
-"../../Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 337
-"../../Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 338
-"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneTexture.uasset" 339
-"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneMaterial.uasset" 340
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.uasset" 341
-"../../Plugins/Runtime/AppleARKit/Content/ARKitCameraMaterial.uasset" 342
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_AO.uasset" 343
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Color.uasset" 344
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Normal.uasset" 345
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Materials/GearVRControllerMaterial.uasset" 346
-"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/GearVrController.uasset" 347
-"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 348
-"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 349
-"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 350
-"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 351
-"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 352
-"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 353
-"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 354
-"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 355
-"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 356
-"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 357
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_GameHUD.uasset" 358
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_GameHUDLauncher.uasset" 359
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/ShakeGamepad/Curve_CollideWithSomething.uasset" 360
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/ShakeGamepad/FFE_CollideWithSomething.uasset" 361
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/ShakeGamepad/Curve_HighDamage.uasset" 362
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/ShakeGamepad/FFE_HighDamage.uasset" 363
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/ShakeGamepad/Curve_Shoot_Damage.uasset" 364
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/ShakeGamepad/FFE_ShootReceived.uasset" 365
-"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Procedurals/ComputeFilterWidth.uasset" 366
-"../../../Engine/Content/EngineMaterials/AntiAliasedTextMaterialTranslucent.uasset" 367
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/1M_Cube.uasset" 368
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 369
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Maps/AeroHeroExampleM.umap" 370
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_CreditsGame.uasset" 371
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_CreditsGameLauncher.uasset" 372
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Maps/AH_Credits.umap" 373
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Maps/AH_Game_BuiltData.uasset" 374
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/enemies/EnemyShipMaterial.uasset" 375
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/enemies/RotateMaterial.uasset" 376
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/enemies/TowerMaterial.uasset" 377
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/maskGrid.uasset" 378
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/MaskStars.uasset" 379
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/GroundRetroMaterial.uasset" 380
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Textures/mask03.uasset" 381
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/OrangeCrystalWithNeonsGreenMaterial.uasset" 382
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/BlinkMaterial.uasset" 383
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Items/BlueBrinkMaterial.uasset" 384
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Items/HPBlueBlinkMaterial.uasset" 385
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/Items/YellowBlinkMaterial.uasset" 386
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/ship/GreenShipMaterial.uasset" 387
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Materials/ship/PurpleShipMaterial.uasset" 388
-"../../../Engine/Content/BasicShapes/Plane.uasset" 389
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Geometry/Cylinder.uasset" 390
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Geometry/Sphere.uasset" 391
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Maps/AH_Game.umap" 392
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/MenuPlayerController.uasset" 393
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_MenuGameMode.uasset" 394
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_StatedMenuHUD.uasset" 395
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_StatedMenuLauncher.uasset" 396
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Maps/AH_MainMenu.umap" 397
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/MyGameInstance.uasset" 398
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_Records.uasset" 399
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Blueprints/BP_RankingLauncher.uasset" 400
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/AeroHero/Maps/AH_Ranking.umap" 401
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" 402
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" 403
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" 404
-"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 405
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" 406
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" 407
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" 408
-"../../../Engine/Content/EditorMaterials/Thumbnails/SkySphereMaterial.uasset" 409
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/Skybox.uasset" 410
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" 411
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" 412
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/BP_LightStudio.uasset" 413
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset" 414
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_AssetPlatform.uasset" 415
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ChromeBall.uasset" 416
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoat.uasset" 417
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoatBlack.uasset" 418
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/Color_checker.uasset" 419
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ColorGrid.uasset" 420
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_GreyBall.uasset" 421
-"../../../Engine/Content/EditorMeshes/ColorCalibrator/SM_ColorCalibrator.uasset" 422
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" 423
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Advanced_Lighting.umap" 424
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset" 425
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_MacroVariation.uasset" 426
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" 427
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" 428
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" 429
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" 430
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" 431
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Copper.uasset" 432
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Statue_M.uasset" 433
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Statue_N.uasset" 434
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" 435
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Floor_400x400.uasset" 436
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Background_Cue.uasset" 437
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Chair.uasset" 438
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Statue.uasset" 439
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Statue.uasset" 440
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_TableRound_M.uasset" 441
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_TableRound_N.uasset" 442
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_TableRound.uasset" 443
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_TableRound.uasset" 444
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Minimal_Default.umap" 445
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire01_Cue.uasset" 446
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Fire_SubUV.uasset" 447
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" 448
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" 449
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Water_N.uasset" 450
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" 451
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" 452
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Fire.uasset" 453
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" 454
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Smoke01_Cue.uasset" 455
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Smoke.uasset" 456
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" 457
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" 458
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Spark_Core.uasset" 459
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Spark.uasset" 460
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Sparks.uasset" 461
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" 462
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Steam01_Cue.uasset" 463
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Steam_Lit.uasset" 464
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" 465
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Lamp_M.uasset" 466
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Lamp_N.uasset" 467
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Lamp.uasset" 468
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" 469
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" 470
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Lamp_Wall.uasset" 471
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" 472
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/StarterMap_BuiltData.uasset" 473
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" 474
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" 475
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" 476
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" 477
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" 478
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" 479
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" 480
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" 481
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" 482
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" 483
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" 484
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" 485
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" 486
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" 487
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" 488
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" 489
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" 490
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" 491
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" 492
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" 493
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" 494
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" 495
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" 496
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" 497
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" 498
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" 499
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" 500
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" 501
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" 502
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Gradinet_01.uasset" 503
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" 504
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" 505
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" 506
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" 507
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" 508
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" 509
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" 510
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" 511
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Grime.uasset" 512
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" 513
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" 514
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Panels.uasset" 515
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" 516
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" 517
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Poured.uasset" 518
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" 519
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" 520
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" 521
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" 522
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" 523
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" 524
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" 525
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ground_Grass.uasset" 526
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" 527
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" 528
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ground_Gravel.uasset" 529
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_ground_Moss_D.uasset" 530
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" 531
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ground_Moss.uasset" 532
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Chrome.uasset" 533
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" 534
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Gold.uasset" 535
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" 536
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Rust.uasset" 537
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" 538
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" 539
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Steel.uasset" 540
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" 541
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Basalt.uasset" 542
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" 543
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" 544
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" 545
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" 546
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" 547
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" 548
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Slate.uasset" 549
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" 550
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Single_Tile_N.uasset" 551
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" 552
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" 553
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" 554
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" 555
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" 556
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" 557
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" 558
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" 559
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" 560
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Panel.uasset" 561
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Water_Lake.uasset" 562
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Water_M.uasset" 563
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Water_Ocean.uasset" 564
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" 565
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" 566
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" 567
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" 568
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/AlphaOffset.uasset" 569
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" 570
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" 571
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" 572
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Oak.uasset" 573
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" 574
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" 575
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Pine.uasset" 576
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" 577
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" 578
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Walnut.uasset" 579
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_400x200.uasset" 580
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" 581
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" 582
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse_Cue.uasset" 583
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Music_Cue.uasset" 584
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" 585
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" 586
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Ambient_Dust.uasset" 587
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/MaterialSphere.uasset" 588
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Frame_M.uasset" 589
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Frame_N.uasset" 590
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Frame.uasset" 591
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_CornerFrame.uasset" 592
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_DoorFrame.uasset" 593
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_GlassWindow.uasset" 594
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_PillarFrame.uasset" 595
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_PillarFrame300.uasset" 596
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_WindowFrame.uasset" 597
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Cube.uasset" 598
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" 599
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Sphere.uasset" 600
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/StarterMap.umap" 601
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStickCPP/Maps/TwinStickExampleMap_BuiltData.uasset" 602
-"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStickCPP/Maps/TwinStickExampleMap.umap" 603
-"../../../Engine/Content/Maps/Entry.umap" 604
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/BaseMaterial.uasset" 0
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Items/BlackBlueMaterial.uasset" 1
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/DoubleShootItem.uasset" 2
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/ship/BlueShipMaterial.uasset" 3
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/HPItem.uasset" 4
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/MissileShootItem.uasset" 5
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/CubeMaterial.uasset" 6
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/TemplateFloor.uasset" 7
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.uasset" 8
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/HUD/IngameOutlineFontMaterial.uasset" 9
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_PauseHUD.uasset" 10
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_LaunchPause.uasset" 11
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset" 12
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset" 13
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset" 14
+"../../../Engine/Content/EngineMaterials/DefaultMaterial.uasset" 15
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Geometry/Cone.uasset" 16
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Game_BuiltData.uasset" 17
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_MainMenu2_BuiltData.uasset" 18
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Black1.uasset" 19
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/BlackWithLights.uasset" 20
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/enemies/OLDTowerMaterial.uasset" 21
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/HUD/IngameFontMaterial.uasset" 22
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Items/HPBlueMaterial.uasset" 23
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Items/RedMaterial.uasset" 24
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Meshes/EnemyProjectile.uasset" 25
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/YellowMaterial.uasset" 26
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Meshes/MissileItem.uasset" 27
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Meshes/PlayerMissileProjectile.uasset" 28
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Meshes/PlayerMissileProjectile2.uasset" 29
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Items/GreenMaterial.uasset" 30
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Meshes/PlayerProjectile.uasset" 31
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/horizontalLine.uasset" 32
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/mask00.uasset" 33
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/mask01.uasset" 34
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/mask01Invert.uasset" 35
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/mask02.uasset" 36
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Basic_Wall.uasset" 37
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Pillar_50x500.uasset" 38
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_400x300.uasset" 39
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_400x400.uasset" 40
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_500x500.uasset" 41
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" 42
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" 43
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse01.uasset" 44
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse02.uasset" 45
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Explosion01.uasset" 46
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Explosion02.uasset" 47
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire01.uasset" 48
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire_Sparks01.uasset" 49
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light01.uasset" 50
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light01_Cue.uasset" 51
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light02.uasset" 52
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Light02_Cue.uasset" 53
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Smoke01.uasset" 54
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Birds01.uasset" 55
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Music01.uasset" 56
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind05.uasset" 57
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Wind06.uasset" 58
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Steam01.uasset" 59
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Explosion_Cue.uasset" 60
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Burst_M.uasset" 61
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Burst.uasset" 62
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" 63
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" 64
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/m_flare_01.uasset" 65
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradient.uasset" 66
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" 67
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" 68
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" 69
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" 70
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Explosion.uasset" 71
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" 72
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/T_ColorGrid.uasset" 73
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" 74
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Bush_D.uasset" 75
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Bush_N.uasset" 76
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Bush.uasset" 77
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Bush.uasset" 78
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Chair_M.uasset" 79
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Chair_N.uasset" 80
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Chair.uasset" 81
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Couch.uasset" 82
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Glass.uasset" 83
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Door_M.uasset" 84
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Door_N.uasset" 85
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Door.uasset" 86
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Door.uasset" 87
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset" 88
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset" 89
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset" 90
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.uasset" 91
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" 92
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" 93
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_RockMesh_M.uasset" 94
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_RockMesh_N.uasset" 95
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Rock.uasset" 96
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Rock.uasset" 97
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Shelf_M.uasset" 98
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Shelf_N.uasset" 99
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Shelf.uasset" 100
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Shelf.uasset" 101
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Basic_Floor.uasset" 102
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Stairs.uasset" 103
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Cone.uasset" 104
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Cylinder.uasset" 105
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" 106
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Pipe.uasset" 107
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" 108
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" 109
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Plane.uasset" 110
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Torus.uasset" 111
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Trim.uasset" 112
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" 113
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" 114
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" 115
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Tube.uasset" 116
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" 117
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" 118
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" 119
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Audio/TwinStickFire.uasset" 120
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/TwinStickProjectile.uasset" 121
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStick/Meshes/TwinStickUFO.uasset" 122
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStickCPP/Maps/TwinStickExampleMap_BuiltData_2.uasset" 123
+"../../../Engine/Content/EngineMaterials/WorldGridMaterial.uasset" 124
+"../../../Engine/Content/BasicShapes/Cube.uasset" 125
+"../../../Engine/Content/BasicShapes/Cylinder.uasset" 126
+"../../../Engine/Content/BasicShapes/Sphere.uasset" 127
+"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 128
+"../../../Engine/Content/EditorMaterials/GizmoMaterial.uasset" 129
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Toggle.uasset" 130
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Visibility.uasset" 131
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 132
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 133
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_ColorTrack.uasset" 134
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Anim.uasset" 135
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_AudioMaster.uasset" 136
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Director.uasset" 137
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Event.uasset" 138
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Fade.uasset" 139
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Float.uasset" 140
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Move.uasset" 141
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Slomo.uasset" 142
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Sound.uasset" 143
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Vector.uasset" 144
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 145
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 146
+"../../../Engine/Content/EditorMaterials/Camera/CineMat.uasset" 147
+"../../../Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.uasset" 148
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Arm.uasset" 149
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Base.uasset" 150
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Body.uasset" 151
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Mount.uasset" 152
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Mount.uasset" 153
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.uasset" 154
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 155
+"../../../Engine/Content/EditorResources/EmptyActor.uasset" 156
+"../../../Engine/Content/EditorResources/S_Actor.uasset" 157
+"../../../Engine/Content/EditorResources/S_Trigger.uasset" 158
+"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent.uasset" 159
+"../../../Engine/Content/EditorResources/AudioIcons/S_AudioComponent_AutoActivate.uasset" 160
+"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 161
+"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 162
+"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 163
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed.uasset" 164
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed_Cue.uasset" 165
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess.uasset" 166
+"../../../Engine/Content/EditorSounds/Notifications/CompileStart_Cue.uasset" 167
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess_Cue.uasset" 168
+"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 169
+"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 170
+"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 171
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial.uasset" 172
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial_WF.uasset" 173
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 174
+"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 175
+"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 176
+"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 177
+"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 178
+"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 179
+"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 180
+"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 181
+"../../../Engine/Content/EngineFonts/Roboto.uasset" 182
+"../../../Engine/Content/EngineFonts/Faces/RobotoTiny.uasset" 183
+"../../../Engine/Content/EngineFonts/RobotoTiny.uasset" 184
+"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 185
+"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 186
+"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 187
+"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 188
+"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 189
+"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 190
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 191
+"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 192
+"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 193
+"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 194
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 195
+"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 196
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 197
+"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 198
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 199
+"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 200
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset" 201
+"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 202
+"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 203
+"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 204
+"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 205
+"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 206
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 207
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 208
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 209
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 210
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 211
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 212
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 213
+"../../../Engine/Content/EngineMeshes/Cube.uasset" 214
+"../../../Engine/Content/EngineMeshes/Cylinder.uasset" 215
+"../../../Engine/Content/EngineMeshes/Sphere.uasset" 216
+"../../../Engine/Content/EngineResources/Black.uasset" 217
+"../../../Engine/Content/EngineResources/DefaultTexture.uasset" 218
+"../../../Engine/Content/EngineResources/DefaultTextureCube.uasset" 219
+"../../../Engine/Content/EngineResources/GradientTexture0.uasset" 220
+"../../../Engine/Content/EngineSounds/Master.uasset" 221
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 222
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 223
+"../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 224
+"../../../Engine/Content/Maps/Templates/Thumbnails/VR-Basic.uasset" 225
+"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 226
+"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 227
+"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 228
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 229
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 230
+"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 231
+"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 232
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 233
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 234
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 235
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 236
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 237
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 238
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 239
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 240
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 241
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 242
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 243
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 244
+"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 245
+"../../../Engine/Content/Tutorial/Basics/TutorialAssets/icon_tab_Levels_40x.uasset" 246
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintInterface_64x.uasset" 247
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintMacroLibrary_64x.uasset" 248
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Blueprint_64x.uasset" 249
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_Interface.uasset" 250
+"../../../Engine/Content/Tutorial/Foliage/TutorialAssets/Foliage.uasset" 251
+"../../../Engine/Content/Tutorial/Landscape/TutorialAssets/Landscape.uasset" 252
+"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DFlipbook_TutorialIcon.uasset" 253
+"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DSprite_TutorialIcon.uasset" 254
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_Editor_Preferences_General_40x.uasset" 255
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/icon_ShowSkeletalMeshes_40x.uasset" 256
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 257
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 258
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 259
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 260
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 261
+"../../../Engine/Content/VREditor/Devices/Generic/GenericHMDMaterial.uasset" 262
+"../../../Engine/Content/VREditor/Devices/Generic/GenericHMD.uasset" 263
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uasset" 264
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksB.uasset" 265
+"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial.uasset" 266
+"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMaterial_Inst.uasset" 267
+"../../../Engine/Content/VREditor/Devices/Oculus/OculusControllerMesh.uasset" 268
+"../../../Engine/Content/VREditor/Devices/Vive/T_VivePreController_EM.uasset" 269
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreController_MasksA.uasset" 270
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerDiffuse.uasset" 271
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerSpec.uasset" 272
+"../../../Engine/Content/VREditor/LaserPointer/VR_LaserPower_01.uasset" 273
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial.uasset" 274
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMaterial_Inst.uasset" 275
+"../../../Engine/Content/VREditor/Devices/Vive/VivePreControllerMesh.uasset" 276
+"../../../Engine/Content/VREditor/FloatingText/LineMaterial.uasset" 277
+"../../../Engine/Content/VREditor/FloatingText/JointSphere.uasset" 278
+"../../../Engine/Content/VREditor/FloatingText/LineSegmentCylinder.uasset" 279
+"../../../Engine/Content/VREditor/Fonts/VRText_RobotoLarge.uasset" 280
+"../../../Engine/Content/VREditor/Fonts/VRTextMaterial.uasset" 281
+"../../../Engine/Content/VREditor/Fonts/TranslucentVRTextMaterial.uasset" 282
+"../../../Engine/Content/VREditor/LaserPointer/CursorPointer.uasset" 283
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.uasset" 284
+"../../../Engine/Content/VREditor/LaserPointer/HoverMaterial.uasset" 285
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.uasset" 286
+"../../../Engine/Content/VREditor/LaserPointer/TranslucentHoverMaterial.uasset" 287
+"../../../Engine/Content/VREditor/LaserPointer/HoverMesh.uasset" 288
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterial.uasset" 289
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMaterialInst.uasset" 290
+"../../../Engine/Content/VREditor/LaserPointer/TranslucentLaserPointerMaterialInst.uasset" 291
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh.uasset" 292
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_End.uasset" 293
+"../../../Engine/Content/VREditor/LaserPointer/LaserPointerMesh_Start.uasset" 294
+"../../../Engine/Content/VREditor/Sounds/VR_teleport.uasset" 295
+"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button.uasset" 296
+"../../../Engine/Content/VREditor/Sounds/UI/Click_on_Button_Cue.uasset" 297
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Close.uasset" 298
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Drop.uasset" 299
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Open.uasset" 300
+"../../../Engine/Content/VREditor/Sounds/UI/Dockable_Window_Pick_Up.uasset" 301
+"../../../Engine/Content/VREditor/Sounds/UI/Drop_Item_From_ContentBrowser.uasset" 302
+"../../../Engine/Content/VREditor/Sounds/UI/Floating_UI_Open-001.uasset" 303
+"../../../Engine/Content/VREditor/Sounds/UI/Radial_Menu_FadeOut.uasset" 304
+"../../../Engine/Content/VREditor/Sounds/UI/Teleport_Mode_Entered.uasset" 305
+"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial.uasset" 306
+"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMaterial_Inst.uasset" 307
+"../../../Engine/Content/VREditor/Teleport/TeleportDirectionMesh.uasset" 308
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset" 309
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset" 310
+"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 311
+"../../../Engine/Content/VREditor/TransformGizmo/Main.uasset" 312
+"../../../Engine/Content/VREditor/TransformGizmo/Xray.uasset" 313
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Close.uasset" 314
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Dialog_Move.uasset" 315
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.uasset" 316
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Node.uasset" 317
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial_Inst.uasset" 318
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial_Inst.uasset" 319
+"../../../Engine/Content/VREditor/Devices/Vive/UE4_Logo.uasset" 320
+"../../../Engine/Content/VREditor/UI/M_ContentWindow.uasset" 321
+"../../../Engine/Content/VREditor/UI/SM_ContentWindow_01.uasset" 322
+"../../../Engine/Content/VREditor/UI/KeyDiskMaterial.uasset" 323
+"../../../Engine/Content/VREditor/UI/DiscMaterial.uasset" 324
+"../../../Engine/Content/VREditor/UI/SM_Radial_Disk.uasset" 325
+"../../../Engine/Content/VREditor/UI/ArrowMaterial.uasset" 326
+"../../../Engine/Content/VREditor/UI/SM_Radial_Pointer.uasset" 327
+"../../../Engine/Content/VREditor/WorldMovementGrid/SimpleGrid.uasset" 328
+"../../../Engine/Content/VREditor/WorldMovementGrid/GridMaterial.uasset" 329
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.uasset" 330
+"../../../Engine/Content/VREditor/WorldMovementGrid/GridPostProcess.uasset" 331
+"../../../Engine/Content/EditorLandscapeResources/FlattenHeightMat.uasset" 332
+"../../../Engine/Content/VREditor/WorldMovementGrid/PlaneMesh.uasset" 333
+"../../Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 334
+"../../Plugins/2D/Paper2D/Content/DummySprite.uasset" 335
+"../../Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 336
+"../../Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 337
+"../../Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 338
+"../../Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 339
+"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneTexture.uasset" 340
+"../../Plugins/Media/MediaCompositing/Content/DefaultMediaPlaneMaterial.uasset" 341
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.uasset" 342
+"../../Plugins/Runtime/AppleARKit/Content/ARKitCameraMaterial.uasset" 343
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_AO.uasset" 344
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Color.uasset" 345
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Textures/GearVRController_Normal.uasset" 346
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Materials/GearVRControllerMaterial.uasset" 347
+"../../Plugins/Runtime/Oculus/OculusVR/Content/Meshes/GearVrController.uasset" 348
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 349
+"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 350
+"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 351
+"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 352
+"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 353
+"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 354
+"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 355
+"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 356
+"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 357
+"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 358
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/MenuPlayerController.uasset" 359
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_MenuGameMode.uasset" 360
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/WhiteTexture.uasset" 361
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_StatedMenuHUD.uasset" 362
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_StatedMenuLauncher.uasset" 363
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/discontHorizontalLine.uasset" 364
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/enemies/EnemyShipMaterial.uasset" 365
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/maskGrid.uasset" 366
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/MaskStars.uasset" 367
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/GroundRetroMaterial.uasset" 368
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/mask03.uasset" 369
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/OrangeCrystalWithNeonsGreenMaterial.uasset" 370
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/WallEndRetroMaterial.uasset" 371
+"../../../Engine/Content/BasicShapes/Plane.uasset" 372
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/1M_Cube.uasset" 373
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Geometry/Sphere.uasset" 374
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Sounds/shoot2_wav.uasset" 375
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_0_MainMenu.umap" 376
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_CreditsGame.uasset" 377
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_CreditsGameLauncher.uasset" 378
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Credits.umap" 379
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_Epilepsy.uasset" 380
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_EpilepsyLauncher.uasset" 381
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Epilepsy.umap" 382
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/MyGameInstance.uasset" 383
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_GameHUD.uasset" 384
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_GameHUDLauncher.uasset" 385
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/ShakeGamepad/Curve_CollideWithSomething.uasset" 386
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/ShakeGamepad/FFE_CollideWithSomething.uasset" 387
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/ShakeGamepad/Curve_HighDamage.uasset" 388
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/ShakeGamepad/FFE_HighDamage.uasset" 389
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/ShakeGamepad/Curve_Shoot_Damage.uasset" 390
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/ShakeGamepad/FFE_ShootReceived.uasset" 391
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/enemies/RotateMaterial.uasset" 392
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/enemies/TowerMaterial.uasset" 393
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/mask00Inv.uasset" 394
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/BlinkMaterial.uasset" 395
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Items/BlueBrinkMaterial.uasset" 396
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Textures/HPMask.uasset" 397
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Items/HPBlueBlinkMaterial.uasset" 398
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/Items/YellowBlinkMaterial.uasset" 399
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/ship/GreenShipMaterial.uasset" 400
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Geometry/Cylinder.uasset" 401
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Music/Robert80z_-_Cybercop_1984.uasset" 402
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Music/Robert80z_-_Cybercop_1984_Cue.uasset" 403
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Sounds/shoot1_wav.uasset" 404
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Game1Players.umap" 405
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Game2Players_BuiltData.uasset" 406
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/ship/PurpleShipMaterial.uasset" 407
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Game2Players.umap" 408
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Game3Players.umap" 409
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_Records.uasset" 410
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Blueprints/BP_RankingLauncher.uasset" 411
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/AH_Ranking.umap" 412
+"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Procedurals/ComputeFilterWidth.uasset" 413
+"../../../Engine/Content/EngineMaterials/AntiAliasedTextMaterialTranslucent.uasset" 414
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Materials/OrangeMaterial.uasset" 415
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 416
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/Discarted/AeroHeroExampleM.umap" 417
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/Discarted/OLDAH_MainMenu3.umap" 418
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/SpaceWave/Maps/Discarted/SW_GameEXAMPLE.umap" 419
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" 420
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" 421
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" 422
+"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 423
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" 424
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" 425
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" 426
+"../../../Engine/Content/EditorMaterials/Thumbnails/SkySphereMaterial.uasset" 427
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/Skybox.uasset" 428
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" 429
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" 430
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/BP_LightStudio.uasset" 431
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset" 432
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_AssetPlatform.uasset" 433
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ChromeBall.uasset" 434
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoat.uasset" 435
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ClearCoatBlack.uasset" 436
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/Color_checker.uasset" 437
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_ColorGrid.uasset" 438
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/M_GreyBall.uasset" 439
+"../../../Engine/Content/EditorMeshes/ColorCalibrator/SM_ColorCalibrator.uasset" 440
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" 441
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Advanced_Lighting.umap" 442
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset" 443
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_MacroVariation.uasset" 444
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" 445
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" 446
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" 447
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" 448
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" 449
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Copper.uasset" 450
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Statue_M.uasset" 451
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Statue_N.uasset" 452
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" 453
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Floor_400x400.uasset" 454
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Background_Cue.uasset" 455
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Chair.uasset" 456
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Statue.uasset" 457
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Statue.uasset" 458
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_TableRound_M.uasset" 459
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_TableRound_N.uasset" 460
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_TableRound.uasset" 461
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_TableRound.uasset" 462
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/Minimal_Default.umap" 463
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire01_Cue.uasset" 464
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Fire_SubUV.uasset" 465
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" 466
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" 467
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Water_N.uasset" 468
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" 469
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" 470
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Fire.uasset" 471
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" 472
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Smoke01_Cue.uasset" 473
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Smoke.uasset" 474
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" 475
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" 476
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Spark_Core.uasset" 477
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Spark.uasset" 478
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Sparks.uasset" 479
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" 480
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Steam01_Cue.uasset" 481
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Steam_Lit.uasset" 482
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" 483
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Lamp_M.uasset" 484
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Lamp_N.uasset" 485
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Lamp.uasset" 486
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" 487
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" 488
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_Lamp_Wall.uasset" 489
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" 490
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/StarterMap_BuiltData.uasset" 491
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" 492
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" 493
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" 494
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" 495
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" 496
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" 497
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" 498
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" 499
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" 500
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" 501
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" 502
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" 503
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" 504
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" 505
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" 506
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" 507
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" 508
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" 509
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" 510
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" 511
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" 512
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" 513
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" 514
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" 515
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" 516
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" 517
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" 518
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" 519
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" 520
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Gradinet_01.uasset" 521
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" 522
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" 523
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" 524
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" 525
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" 526
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" 527
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" 528
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" 529
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Grime.uasset" 530
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" 531
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" 532
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Panels.uasset" 533
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" 534
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" 535
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Poured.uasset" 536
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" 537
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" 538
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" 539
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" 540
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" 541
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" 542
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" 543
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ground_Grass.uasset" 544
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" 545
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" 546
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ground_Gravel.uasset" 547
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_ground_Moss_D.uasset" 548
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" 549
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Ground_Moss.uasset" 550
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Chrome.uasset" 551
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" 552
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Gold.uasset" 553
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" 554
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Rust.uasset" 555
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" 556
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" 557
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Metal_Steel.uasset" 558
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" 559
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Basalt.uasset" 560
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" 561
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" 562
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" 563
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" 564
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" 565
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" 566
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Rock_Slate.uasset" 567
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" 568
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Single_Tile_N.uasset" 569
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" 570
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" 571
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" 572
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" 573
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" 574
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" 575
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" 576
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" 577
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" 578
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Tech_Panel.uasset" 579
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Water_Lake.uasset" 580
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Water_M.uasset" 581
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Water_Ocean.uasset" 582
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" 583
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" 584
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" 585
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" 586
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/AlphaOffset.uasset" 587
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" 588
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" 589
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" 590
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Oak.uasset" 591
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" 592
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" 593
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Pine.uasset" 594
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" 595
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" 596
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Materials/M_Wood_Walnut.uasset" 597
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_400x200.uasset" 598
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" 599
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" 600
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Collapse_Cue.uasset" 601
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Audio/Starter_Music_Cue.uasset" 602
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" 603
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" 604
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Particles/P_Ambient_Dust.uasset" 605
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/MaterialSphere.uasset" 606
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Frame_M.uasset" 607
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Textures/T_Frame_N.uasset" 608
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/Materials/M_Frame.uasset" 609
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_CornerFrame.uasset" 610
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_DoorFrame.uasset" 611
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_GlassWindow.uasset" 612
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_PillarFrame.uasset" 613
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_PillarFrame300.uasset" 614
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Props/SM_WindowFrame.uasset" 615
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Cube.uasset" 616
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" 617
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Shapes/Shape_Sphere.uasset" 618
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/StarterContent/Maps/StarterMap.umap" 619
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStickCPP/Maps/TwinStickExampleMap_BuiltData.uasset" 620
+"../../../../../../Users/sergi/Documents/Unreal Projects/AeroHero/Content/TwinStickCPP/Maps/TwinStickExampleMap.umap" 621
+"../../../Engine/Content/Maps/Entry.umap" 622
