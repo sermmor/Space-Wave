@@ -1,39 +1,31 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
 #include "AeroHeroPawn.h"
-#include "AeroHeroProjectile.h"
-#include "TimerManager.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Camera/CameraComponent.h"
-#include "Components/StaticMeshComponent.h"
-#include "Components/InputComponent.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "Engine/CollisionProfile.h"
-#include "Engine/StaticMesh.h"
-#include "Kismet/GameplayStatics.h"
-#include "Sound/SoundBase.h"
+#include "Components/InputComponent.h"
 
-const FName AAeroHeroPawn::MoveForwardBinding("MoveForward");
-const FName AAeroHeroPawn::MoveRightBinding("MoveRight");
-const FName AAeroHeroPawn::FireForwardBinding("FireForward");
-const FName AAeroHeroPawn::FireRightBinding("FireRight");
+const FName AAeroHeroPawn::MoveForwardBindingP1("MoveForward_P1");
+const FName AAeroHeroPawn::MoveRightBindingP1("MoveRight_P1");
+const FName AAeroHeroPawn::FireNormalP1("FireNormal_P1");
+const FName AAeroHeroPawn::JumpNormalP1("JumpNormal_P1");
+
+const FName AAeroHeroPawn::MoveForwardBindingP2("MoveForward_P2");
+const FName AAeroHeroPawn::MoveRightBindingP2("MoveRight_P2");
+const FName AAeroHeroPawn::FireNormalP2("FireNormal_P2");
+const FName AAeroHeroPawn::JumpNormalP2("JumpNormal_P2");
+
+const FName AAeroHeroPawn::MoveForwardBindingP3("MoveForward_P3");
+const FName AAeroHeroPawn::MoveRightBindingP3("MoveRight_P3");
+const FName AAeroHeroPawn::FireNormalP3("FireNormal_P3");
+const FName AAeroHeroPawn::JumpNormalP3("JumpNormal_P3");
 
 AAeroHeroPawn::AAeroHeroPawn()
 {	
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("/Game/TwinStick/Meshes/TwinStickUFO.TwinStickUFO"));
-	// Create the mesh component
-	ShipMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
-	RootComponent = ShipMeshComponent;
-	ShipMeshComponent->SetCollisionProfileName(UCollisionProfile::Pawn_ProfileName);
-	ShipMeshComponent->SetStaticMesh(ShipMesh.Object);
-	
-	// Cache our sound effect
-	static ConstructorHelpers::FObjectFinder<USoundBase> FireAudio(TEXT("/Game/TwinStick/Audio/TwinStickFire.TwinStickFire"));
-	FireSound = FireAudio.Object;
-
 	// Create a camera boom...
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
-	CameraBoom->SetupAttachment(RootComponent);
+	RootComponent = CameraBoom;
 	CameraBoom->bAbsoluteRotation = true; // Don't want arm to rotate when ship does
 	CameraBoom->TargetArmLength = 1200.f;
 	CameraBoom->RelativeRotation = FRotator(-80.f, 0.f, 0.f);
@@ -44,96 +36,151 @@ AAeroHeroPawn::AAeroHeroPawn()
 	CameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	CameraComponent->bUsePawnControlRotation = false;	// Camera does not rotate relative to arm
 
-	// Movement
-	MoveSpeed = 1000.0f;
-	// Weapon
-	GunOffset = FVector(90.f, 0.f, 0.f);
-	FireRate = 0.1f;
-	bCanFire = true;
+	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
+	IsPushedJumpP1 = IsPushedJumpP2 = IsPushedJumpP3 = false;
+	IsDeathP1 = IsDeathP2 = IsDeathP3 = false;
+	AccelerationCamera = 2.0f;
+
 }
 
 void AAeroHeroPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	check(PlayerInputComponent);
 
-	// set up gameplay key bindings
-	PlayerInputComponent->BindAxis(MoveForwardBinding);
-	PlayerInputComponent->BindAxis(MoveRightBinding);
-	PlayerInputComponent->BindAxis(FireForwardBinding);
-	//PlayerInputComponent->BindAxis(FireRightBinding);
+	// set up gameplay key bindings Player 1.
+	PlayerInputComponent->BindAxis(MoveForwardBindingP1);
+	PlayerInputComponent->BindAxis(MoveRightBindingP1);
+	PlayerInputComponent->BindAction(FireNormalP1, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP1);
+	PlayerInputComponent->BindAction(FireNormalP1, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP1);
+	//PlayerInputComponent->BindAction(JumpNormalP1, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP1);
+
+	// set up gameplay key bindings Player 2.
+	PlayerInputComponent->BindAxis(MoveForwardBindingP2);
+	PlayerInputComponent->BindAxis(MoveRightBindingP2);
+	PlayerInputComponent->BindAction(FireNormalP2, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP2);
+	PlayerInputComponent->BindAction(FireNormalP2, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP2);
+	//PlayerInputComponent->BindAction(JumpNormalP2, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP2);
+
+	// set up gameplay key bindings Player 3.
+	PlayerInputComponent->BindAxis(MoveForwardBindingP3);
+	PlayerInputComponent->BindAxis(MoveRightBindingP3);
+	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnPushInFireP3);
+	PlayerInputComponent->BindAction(FireNormalP3, EInputEvent::IE_Released, this, &AAeroHeroPawn::OnPushInFireP3);
+	//PlayerInputComponent->BindAction(JumpNormalP3, EInputEvent::IE_Pressed, this, &AAeroHeroPawn::OnJumpNormalP3);
+	
+}
+
+void AAeroHeroPawn::OnJumpNormalP1()
+{
+	IsPushedJumpP1 = true;
+}
+
+void AAeroHeroPawn::OnJumpNormalP2()
+{
+	IsPushedJumpP2 = true;
+}
+
+void AAeroHeroPawn::OnJumpNormalP3()
+{
+	IsPushedJumpP3 = true;
+}
+
+void AAeroHeroPawn::OnPushInFireP1()
+{
+	IsFirePushedP1 = true;
+}
+
+void AAeroHeroPawn::OnPushInFireP2()
+{
+	IsFirePushedP2 = true;
+}
+
+void AAeroHeroPawn::OnPushInFireP3()
+{
+	IsFirePushedP3 = true;
 }
 
 void AAeroHeroPawn::Tick(float DeltaSeconds)
 {
+	if (AllPlayerShips.Num() == 0)
+	{
+		if (CameraBoom != NULL)
+		{
+			// Camera forward movement.
+			FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera * 2, 0, 0);
+			FHitResult Hit(1.f);
+			CameraBoom->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
+		}
+
+		return;
+	}
+
 	// Find movement direction
-	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
-	const float RightValue = GetInputAxisValue(MoveRightBinding);
-
-	// Clamp max size so that (X=1, Y=1) doesn't cause faster movement in diagonal directions
-	const FVector MoveDirection = FVector(ForwardValue, RightValue, 0.f).GetClampedToMaxSize(1.0f);
-
-	// Calculate  movement
-	const FVector Movement = MoveDirection * MoveSpeed * DeltaSeconds;
-
-	// If non-zero size, move this actor
-	if (Movement.SizeSquared() > 0.0f)
-	{
-		const FRotator NewRotation = Movement.Rotation();
-		FHitResult Hit(1.f);
-		RootComponent->MoveComponent(Movement, NewRotation, true, &Hit);
-		
-		if (Hit.IsValidBlockingHit())
-		{
-			const FVector Normal2D = Hit.Normal.GetSafeNormal2D();
-			const FVector Deflection = FVector::VectorPlaneProject(Movement, Normal2D) * (1.f - Hit.Time);
-			RootComponent->MoveComponent(Deflection, NewRotation, true);
-		}
-	}
+	const float ForwardValueP1 = GetInputAxisValue(MoveForwardBindingP1);
+	const float RightValueP1 = GetInputAxisValue(MoveRightBindingP1);
+	const float ForwardValueP2 = GetInputAxisValue(MoveForwardBindingP2);
+	const float RightValueP2 = GetInputAxisValue(MoveRightBindingP2);
+	const float ForwardValueP3 = GetInputAxisValue(MoveForwardBindingP3);
+	const float RightValueP3 = GetInputAxisValue(MoveRightBindingP3);
 	
-	// Create fire direction vector
-	const float FireForwardValue = GetInputAxisValue(FireForwardBinding) > 0 ? 1 : 0;
-	const float FireRightValue = GetInputAxisValue(FireRightBinding);
-	const FVector FireDirection = FVector(FireForwardValue, FireRightValue, 0.f);
+	CheckPlayersDeaths();
 
-	// Try and fire a shot
-	FireShot(FireDirection);
-}
-
-void AAeroHeroPawn::FireShot(FVector FireDirection)
-{
-	// If it's ok to fire again
-	if (bCanFire == true)
+	int index = 0;
+	for (APlayerShip* MyPlayerShip : AllPlayerShips)
 	{
-		// If we are pressing fire stick in a direction
-		if (FireDirection.SizeSquared() > 0.0f)
-		{
-			const FRotator FireRotation = FireDirection.Rotation();
-			// Spawn projectile at an offset from this pawn
-			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
+		if (MyPlayerShip == NULL || (index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
+			continue; // CHECK IF A PLAYER IS DEATH.
 
-			UWorld* const World = GetWorld();
-			if (World != NULL)
-			{
-				// spawn the projectile
-				World->SpawnActor<AAeroHeroProjectile>(SpawnLocation, FireRotation);
-			}
+		MyPlayerShip->UpdateInputsP1(ForwardValueP1, RightValueP1, IsFirePushedP1, IsPushedJumpP1);
+		MyPlayerShip->UpdateInputsP2(ForwardValueP2, RightValueP2, IsFirePushedP2, IsPushedJumpP2);
+		MyPlayerShip->UpdateInputsP3(ForwardValueP3, RightValueP3, IsFirePushedP3, IsPushedJumpP3);
+		index++;
+	}
 
-			bCanFire = false;
-			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AAeroHeroPawn::ShotTimerExpired, FireRate);
+	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
+	IsPushedJumpP1 = IsPushedJumpP2 = IsPushedJumpP3 = false;
 
-			// try and play the sound if specified
-			if (FireSound != nullptr)
-			{
-				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-			}
+	// Camera forward movement.
+	FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera, 0, 0);
+	FHitResult Hit(1.f);
+	CameraBoom->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
+	
+	index = 0;
+	for (APlayerShip* MyPlayerShip : AllPlayerShips)
+	{
+		if (MyPlayerShip == NULL || (index == 0 && IsDeathP1) || (index == 1 && IsDeathP2) || (index == 2 && IsDeathP3))
+			continue; // CHECK IF A PLAYER IS DEATH.
 
-			bCanFire = false;
-		}
+		MyPlayerShip->UpdateCameraBoomLocation(CameraBoom->GetComponentLocation().X, 
+			CameraBoom->GetComponentLocation().Y, 
+			CameraBoom->GetComponentLocation().Z);
+
+		index++;
 	}
 }
 
-void AAeroHeroPawn::ShotTimerExpired()
+void AAeroHeroPawn::CheckPlayersDeaths()
 {
-	bCanFire = true;
+	if (AllPlayerShips.Num() == 0)
+	{
+		IsDeathP1 = IsDeathP2 = IsDeathP3 = true;
+		return;
+	}
+
+	if (!IsDeathP1 && AllPlayerShips.Num() > 0 && AllPlayerShips[0]->IsDeath)
+		IsDeathP1 = true;
+
+	if (!IsDeathP2 && AllPlayerShips.Num() > 1 && AllPlayerShips[1]->IsDeath)
+		IsDeathP2 = true;
+
+	if (!IsDeathP3 && AllPlayerShips.Num() > 2 && AllPlayerShips[2]->IsDeath)
+		IsDeathP3 = true;
 }
 
+FVector AAeroHeroPawn::GetCameraLocation()
+{
+	if (CameraBoom != NULL)
+		return CameraBoom->GetComponentLocation();
+	else
+		return FVector(0, 0, 0);
+}
