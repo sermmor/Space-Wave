@@ -52,6 +52,10 @@ public:
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	bool IsPlayerTwo;
 
+	/* Show the index of de player bar for this player ship. */
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
+	int PlayerBarIndex;
+
 	/* Check if this player is death. */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	bool IsDeath;

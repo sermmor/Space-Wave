@@ -39,7 +39,7 @@ AAeroHeroPawn::AAeroHeroPawn()
 	IsFirePushedP1 = IsFirePushedP2 = IsFirePushedP3 = false;
 	IsPushedJumpP1 = IsPushedJumpP2 = IsPushedJumpP3 = false;
 	IsDeathP1 = IsDeathP2 = IsDeathP3 = false;
-	AccelerationCamera = 1.0f;
+	AccelerationCamera = 2.0f;
 
 }
 
@@ -107,7 +107,7 @@ void AAeroHeroPawn::Tick(float DeltaSeconds)
 		if (CameraBoom != NULL)
 		{
 			// Camera forward movement.
-			FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera, 0, 0);
+			FVector MoveDirection = FVector(VelocityCamera * AccelerationCamera * 2, 0, 0);
 			FHitResult Hit(1.f);
 			CameraBoom->MoveComponent(MoveDirection, CameraBoom->RelativeRotation, true, &Hit);
 		}
